@@ -1,4 +1,5 @@
 import { uiText } from '../content';
+import { AccountCard } from '../components/AccountCard';
 import { MenuButton } from '../components/MenuButton';
 import { Screen } from '../components/Screen';
 import { useLanguage } from '../lib/i18n';
@@ -16,7 +17,7 @@ export default function MainMenu() {
         <p className="text-lg text-slate-700">{t(uiText.app.tagline)}</p>
       </header>
 
-      {/* Account card: phase 2. */}
+      <AccountCard />
 
       <MenuButton to="/sismo" variant="red">
         {t(menu.earthquake)}

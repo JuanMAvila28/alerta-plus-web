@@ -1,13 +1,13 @@
 import Dexie, { type EntityTable } from 'dexie';
 import type { LocalPreference, Session, UserDocument } from '../types';
 
-class AlertaDatabase extends Dexie {
+export class AlertaDatabase extends Dexie {
   session!: EntityTable<Session, 'key'>;
   documents!: EntityTable<UserDocument, 'type'>;
   localPreferences!: EntityTable<LocalPreference, 'key'>;
 
-  constructor() {
-    super('alerta');
+  constructor(name = 'alerta') {
+    super(name);
     this.version(1).stores({
       session: 'key',
       documents: 'type',

@@ -1,0 +1,24 @@
+name = "alerta-plus-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Not secret (plan section 7.3).
+GOOGLE_CLIENT_ID = "347636936339-9cg9qkrkem619pi3tvau6300avmncja9.apps.googleusercontent.com"
+JWT_KID = "dev-1"
+APP_URL = "http://localhost:5173"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "alerta"
+database_id = "local-dev"            # replace with the real id from `wrangler d1 create alerta`
+migrations_dir = "migrations"
+
+# Basic per-IP limit on /api/auth/* (plan section 7.9).
+[[ratelimits]]
+name = "AUTH_LIMITER"
+namespace_id = "1001"
+simple = { limit = 30, period = 60 }
+
+# Secret (wrangler secret put JWT_PRIVATE_KEY; locally in worker/.dev.vars):
+#   JWT_PRIVATE_KEY = ES256 private JWK as JSON

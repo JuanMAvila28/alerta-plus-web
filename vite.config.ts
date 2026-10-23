@@ -45,6 +45,9 @@ export default defineConfig({
       devOptions: { enabled: false },
     }),
   ],
+  // Development: the Worker runs on its own port (`npm run dev:api`); in production it shares the domain.
+  server: { proxy: { '/api': 'http://localhost:8787' } },
+  preview: { proxy: { '/api': 'http://localhost:8787' } },
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
