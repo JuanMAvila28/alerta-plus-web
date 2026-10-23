@@ -1,0 +1,410 @@
+{
+  "_description": "'EARTHQUAKE IN PROGRESS' protocol: 8 fixed steps. Each step shows (numbered 1., 2., ...) only the instructions whose 'condition' is true or that have no condition, in this order. The voice reads: title + '. ' + each instruction + '. '.",
+  "_conditionsNote": "Conditions use JS syntax with the predicates above. Implement them as typed functions (no eval).",
+  "heading": {
+    "es": "ESTÁ TEMBLANDO",
+    "en": "EARTHQUAKE IN PROGRESS"
+  },
+  "predicates": {
+    "isApartment": "home.homeType === 'apartment'",
+    "isHighFloor": "home.floor === 'thirdOrHigher'",
+    "hasStairs": "home.stairs === 'yes'",
+    "hasElevator": "home.elevator === 'yes'",
+    "hasEvacuationRoute": "home.evacuationRoute === 'yes'",
+    "hasMeetingPoint": "home.meetingPoint === 'yes'",
+    "hasDirectExit": "home.streetAccess === 'yes'",
+    "exitIsStairs": "home.emergencyExit === 'stairs'"
+  },
+  "steps": [
+    {
+      "number": 1,
+      "title": {
+        "es": "MANTÉN LA CALMA",
+        "en": "STAY CALM"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "No corras hacia la salida mientras el suelo está temblando.",
+            "en": "Do not run for the exit while the ground is shaking."
+          }
+        },
+        {
+          "text": {
+            "es": "Permanece dentro del lugar donde estás.",
+            "en": "Stay inside where you are."
+          }
+        },
+        {
+          "text": {
+            "es": "Mantén la calma y respira lentamente.",
+            "en": "Stay calm and breathe slowly."
+          }
+        },
+        {
+          "text": {
+            "es": "Busca un lugar seguro y protege tu cabeza y cuello.",
+            "en": "Find a safe place and protect your head and neck."
+          }
+        },
+        {
+          "text": {
+            "es": "Aléjate de ventanas, vidrios y objetos que puedan caer.",
+            "en": "Stay away from windows, glass, and objects that could fall."
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "PROTÉGETE",
+        "en": "TAKE COVER"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "Aléjate de ventanas, espejos, muebles altos y objetos que puedan caer.",
+            "en": "Stay away from windows, mirrors, tall furniture, and objects that could fall."
+          }
+        },
+        {
+          "text": {
+            "es": "Protege tu cabeza y cuello.",
+            "en": "Protect your head and neck."
+          }
+        },
+        {
+          "text": {
+            "es": "Si estás junto a una mesa resistente, puedes protegerte debajo de ella.",
+            "en": "If a sturdy table is nearby, take cover under it."
+          }
+        },
+        {
+          "text": {
+            "es": "No corras hacia las escaleras mientras el movimiento continúe.",
+            "en": "Do not run toward the stairs while the shaking continues."
+          }
+        },
+        {
+          "text": {
+            "es": "No uses el ascensor durante el temblor.",
+            "en": "Do not use the elevator during the earthquake."
+          }
+        },
+        {
+          "text": {
+            "es": "Estás en un piso alto. Permanece dentro hasta que termine el movimiento.",
+            "en": "You are on a high floor. Stay inside until the shaking stops."
+          },
+          "condition": "isApartment && isHighFloor"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "PROTEGE A LOS DEMÁS",
+        "en": "PROTECT OTHERS"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "Cuando sea posible hacerlo sin ponerte en peligro, verifica a las personas que están contigo.",
+            "en": "When it is safe, check on the people with you."
+          }
+        },
+        {
+          "text": {
+            "es": "Presta especial atención a niños, adultos mayores y personas con movilidad reducida.",
+            "en": "Pay special attention to children, older adults, and people with limited mobility."
+          }
+        },
+        {
+          "text": {
+            "es": "Ayuda a quien necesite asistencia, pero no te expongas a un peligro.",
+            "en": "Help anyone who needs assistance, but do not put yourself in danger."
+          }
+        },
+        {
+          "text": {
+            "es": "Mantén a las personas del grupo juntas.",
+            "en": "Keep everyone in your group together."
+          }
+        },
+        {
+          "text": {
+            "es": "Presta atención a tus mascotas y evita que corran hacia zonas peligrosas.",
+            "en": "Keep an eye on your pets and prevent them from running into dangerous areas."
+          }
+        },
+        {
+          "text": {
+            "es": "Mientras el movimiento continúe, no recojas el kit, las llaves ni objetos personales.",
+            "en": "While the shaking continues, do not collect your kit, keys, or personal belongings."
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "CUANDO TERMINE EL TEMBLOR",
+        "en": "WHEN THE SHAKING STOPS"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "Espera a que el movimiento termine antes de iniciar la evacuación.",
+            "en": "Wait until the shaking stops before evacuating."
+          }
+        },
+        {
+          "text": {
+            "es": "Observa rápidamente si existe algún peligro inmediato.",
+            "en": "Quickly check for any immediate danger."
+          }
+        },
+        {
+          "text": {
+            "es": "Verifica si hay humo, fuego, daños importantes, cables caídos u otras situaciones peligrosas.",
+            "en": "Check for smoke, fire, major damage, fallen wires, or other hazards."
+          }
+        },
+        {
+          "text": {
+            "es": "Si existe una emergencia, solicita ayuda.",
+            "en": "If there is an emergency, call for help."
+          }
+        },
+        {
+          "text": {
+            "es": "No regreses a zonas peligrosas para recoger objetos.",
+            "en": "Do not return to dangerous areas to collect belongings."
+          }
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "PREPÁRATE PARA EVACUAR",
+        "en": "PREPARE TO EVACUATE"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "Ayuda primero a los niños y a las personas que necesiten asistencia.",
+            "en": "Help children and anyone who needs assistance first."
+          }
+        },
+        {
+          "text": {
+            "es": "Mantén unido al grupo y evita separarte innecesariamente.",
+            "en": "Keep your group together and avoid separating unnecessarily."
+          }
+        },
+        {
+          "text": {
+            "es": "Prepárate para utilizar las escaleras.",
+            "en": "Prepare to use the stairs."
+          },
+          "condition": "exitIsStairs || hasStairs"
+        },
+        {
+          "text": {
+            "es": "Sigue la ruta de evacuación que tienes configurada.",
+            "en": "Follow your configured evacuation route."
+          },
+          "condition": "hasEvacuationRoute"
+        },
+        {
+          "text": {
+            "es": "Tu vivienda tiene salida directa. Prepárate para salir hacia un lugar seguro.",
+            "en": "Your home has a direct exit. Prepare to leave for a safe place."
+          },
+          "condition": "!hasEvacuationRoute && hasDirectExit"
+        },
+        {
+          "text": {
+            "es": "Identifica una salida segura antes de comenzar a evacuar.",
+            "en": "Identify a safe exit before you begin evacuating."
+          },
+          "condition": "!hasEvacuationRoute && !hasDirectExit"
+        },
+        {
+          "text": {
+            "es": "Puedes tomar el kit de emergencia si está inmediatamente al alcance y hacerlo es seguro.",
+            "en": "Take the emergency kit only if it is within reach and safe to do so."
+          }
+        },
+        {
+          "text": {
+            "es": "Puedes tomar las llaves si están inmediatamente disponibles y no necesitas regresar por ellas.",
+            "en": "Take your keys only if they are immediately available and you do not need to go back for them."
+          }
+        },
+        {
+          "text": {
+            "es": "No regreses por objetos personales.",
+            "en": "Do not go back for personal belongings."
+          }
+        },
+        {
+          "text": {
+            "es": "Aunque tengas ascensor, no lo utilices para evacuar.",
+            "en": "Even if your building has an elevator, do not use it to evacuate."
+          },
+          "condition": "hasElevator"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "EVACÚA",
+        "en": "EVACUATE"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "Sigue la ruta de evacuación configurada.",
+            "en": "Follow the configured evacuation route."
+          },
+          "condition": "hasEvacuationRoute"
+        },
+        {
+          "text": {
+            "es": "Utiliza las escaleras cuando sea seguro hacerlo.",
+            "en": "Use the stairs when it is safe to do so."
+          },
+          "condition": "hasStairs || isApartment || isHighFloor"
+        },
+        {
+          "text": {
+            "es": "No uses el ascensor.",
+            "en": "Do not use the elevator."
+          },
+          "condition": "hasStairs || isApartment || isHighFloor"
+        },
+        {
+          "text": {
+            "es": "Sal directamente hacia un lugar seguro fuera de la vivienda.",
+            "en": "Exit directly to a safe place outside the home."
+          },
+          "condition": "hasDirectExit && !isApartment"
+        },
+        {
+          "text": {
+            "es": "Camina de manera ordenada y evita correr o empujar.",
+            "en": "Walk calmly and do not run or push."
+          }
+        },
+        {
+          "text": {
+            "es": "Mantén juntos a los niños y a las personas que necesiten ayuda.",
+            "en": "Keep children and anyone who needs help with you."
+          }
+        },
+        {
+          "text": {
+            "es": "Mantén a tus mascotas bajo control cuando sea posible.",
+            "en": "Keep your pets under control when possible."
+          }
+        },
+        {
+          "text": {
+            "es": "No regreses al interior para buscar objetos.",
+            "en": "Do not go back inside to retrieve belongings."
+          }
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "ALÉJATE DEL EDIFICIO",
+        "en": "MOVE AWAY FROM THE BUILDING"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "Una vez afuera, aléjate de la fachada del edificio o vivienda.",
+            "en": "Once outside, move away from the building or home's exterior walls."
+          }
+        },
+        {
+          "text": {
+            "es": "Aléjate de ventanas, balcones, postes, cables y otros objetos que puedan caer.",
+            "en": "Stay away from windows, balconies, poles, wires, and other objects that could fall."
+          }
+        },
+        {
+          "text": {
+            "es": "No permanezcas justo al lado del edificio.",
+            "en": "Do not remain right next to the building."
+          }
+        },
+        {
+          "text": {
+            "es": "Mantén unido al grupo.",
+            "en": "Keep your group together."
+          }
+        },
+        {
+          "text": {
+            "es": "Sigue las indicaciones de las autoridades o del personal de emergencia.",
+            "en": "Follow instructions from authorities or emergency personnel."
+          }
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "PUNTO DE ENCUENTRO",
+        "en": "MEETING POINT"
+      },
+      "instructions": [
+        {
+          "text": {
+            "es": "Dirígete al punto de encuentro configurado para tu grupo familiar.",
+            "en": "Go to the meeting point set for your family group."
+          },
+          "condition": "hasMeetingPoint"
+        },
+        {
+          "text": {
+            "es": "Dirígete a un lugar seguro previamente acordado con tu familia.",
+            "en": "Go to a safe place previously agreed upon with your family."
+          },
+          "condition": "!hasMeetingPoint"
+        },
+        {
+          "text": {
+            "es": "Verifica que las personas que estaban contigo estén presentes.",
+            "en": "Make sure everyone who was with you is present."
+          }
+        },
+        {
+          "text": {
+            "es": "Ayuda a quien necesite asistencia.",
+            "en": "Help anyone who needs assistance."
+          }
+        },
+        {
+          "text": {
+            "es": "No regreses al edificio hasta que las autoridades o personal autorizado indiquen que es seguro.",
+            "en": "Do not return to the building until authorities or authorized personnel say it is safe."
+          }
+        },
+        {
+          "text": {
+            "es": "Mantente atento a nuevas indicaciones y posibles réplicas.",
+            "en": "Stay alert for further instructions and possible aftershocks."
+          }
+        }
+      ]
+    }
+  ]
+}

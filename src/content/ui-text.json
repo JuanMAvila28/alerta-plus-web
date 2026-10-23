@@ -1,0 +1,409 @@
+{
+  "_description": "Interface text by screen. 'en': null = the Android app has no translation (English showed Spanish). '{x}' = variable. Keys starting with '_' are reference only: the Google Play messages are replaced by the web payment flow messages.",
+  "app": {
+    "name": {
+      "es": "ALERTA+",
+      "en": "ALERTA+"
+    },
+    "tagline": {
+      "es": "Guía de emergencia paso a paso",
+      "en": "Step-by-step emergency guide"
+    },
+    "splashTagline": {
+      "es": "Preparación y apoyo para tu familia",
+      "en": null
+    }
+  },
+  "menu": {
+    "earthquake": {
+      "es": "ESTÁ TEMBLANDO",
+      "en": "EARTHQUAKE IN PROGRESS"
+    },
+    "emergency": {
+      "es": "TENGO UNA EMERGENCIA",
+      "en": "I HAVE AN EMERGENCY"
+    },
+    "home": {
+      "es": "🏠 CONFIGURAR MI VIVIENDA",
+      "en": "🏠 SET UP MY HOME"
+    },
+    "kit": {
+      "es": "🎒 KIT DE EMERGENCIA",
+      "en": "🎒 EMERGENCY KIT"
+    },
+    "firstAidKit": {
+      "es": "🧰 BOTIQUÍN",
+      "en": "🧰 FIRST AID KIT"
+    },
+    "checklist": {
+      "es": "📋 CHECKLIST PREVIO",
+      "en": "📋 PRE-EVENT CHECKLIST"
+    },
+    "premium": {
+      "es": "⭐ ALERTA+ PREMIUM",
+      "en": "⭐ ALERTA+ PREMIUM"
+    },
+    "contacts": {
+      "es": "🟢 ESTOY BIEN",
+      "en": "🟢 I'M SAFE"
+    },
+    "language": {
+      "es": "🌎 IDIOMA",
+      "en": "🌎 LANGUAGE"
+    },
+    "privacy": {
+      "es": "Política de privacidad",
+      "en": null
+    }
+  },
+  "emergency": {
+    "title": {
+      "es": "TENGO UNA EMERGENCIA",
+      "en": "I HAVE AN EMERGENCY"
+    },
+    "question": {
+      "es": "¿Qué tipo de emergencia tienes?",
+      "en": "What type of emergency are you facing?"
+    },
+    "back": {
+      "es": "VOLVER",
+      "en": "BACK"
+    }
+  },
+  "protocol": {
+    "counter": {
+      "es": "Paso {current} de {total}",
+      "en": "Step {current} of {total}"
+    },
+    "autoContinue": {
+      "es": "La aplicación continuará cuando termine la lectura.",
+      "en": "The app will continue when the instructions finish."
+    },
+    "backToEmergencies": {
+      "es": "↩️ VOLVER A EMERGENCIAS",
+      "en": "↩️ BACK TO EMERGENCIES"
+    },
+    "back": {
+      "es": "VOLVER",
+      "en": "BACK"
+    },
+    "exit": {
+      "es": "SALIR DEL PROTOCOLO",
+      "en": "EXIT PROTOCOL"
+    }
+  },
+  "lists": {
+    "readyCount": {
+      "es": "Listos: {done} de {total}",
+      "en": "Ready: {done} of {total}"
+    },
+    "backToMenu": {
+      "es": "↩️ VOLVER AL INICIO",
+      "en": "↩️ BACK TO HOME"
+    }
+  },
+  "contacts": {
+    "title": {
+      "es": "ESTOY BIEN",
+      "en": "I'M SAFE"
+    },
+    "subtitle": {
+      "es": "CONFIGURA TU NÚCLEO MÁS CERCANO",
+      "en": "SET UP YOUR EMERGENCY CONTACTS"
+    },
+    "description": {
+      "es": "Agrega las personas que quieres tener como contacto en una emergencia.",
+      "en": "Add the people you want to contact in an emergency."
+    },
+    "myContacts": {
+      "es": "👨‍👩‍👧‍👦 MI NÚCLEO",
+      "en": "👨‍👩‍👧‍👦 MY EMERGENCY CONTACTS"
+    },
+    "relationship": {
+      "es": "Relación: {relationship}",
+      "en": "Relationship: {relationship}"
+    },
+    "delete": {
+      "es": "🗑️ ELIMINAR",
+      "en": "🗑️ DELETE"
+    },
+    "edit": {
+      "es": "✏️ EDITAR",
+      "en": "✏️ EDIT"
+    },
+    "add": {
+      "es": "➕ AGREGAR PERSONA",
+      "en": "➕ ADD PERSON"
+    },
+    "notify": {
+      "es": "🟢 AVISAR A MI NÚCLEO",
+      "en": "🟢 NOTIFY MY CONTACTS"
+    },
+    "backToMenu": {
+      "es": "↩️ VOLVER AL INICIO",
+      "en": "↩️ BACK TO HOME"
+    }
+  },
+  "person": {
+    "title": {
+      "es": "AGREGAR PERSONA",
+      "en": "ADD PERSON"
+    },
+    "description": {
+      "es": "Aquí registraremos una persona de tu núcleo cercano.",
+      "en": "Add a person to your emergency contacts here."
+    },
+    "name": {
+      "es": "Nombre de la persona",
+      "en": "Person's name"
+    },
+    "phone": {
+      "es": "Número telefónico",
+      "en": "Phone number"
+    },
+    "pickContact": {
+      "es": "📱 ELEGIR DESDE MIS CONTACTOS",
+      "en": null
+    },
+    "selectedPhone": {
+      "es": "Teléfono seleccionado: {phone}",
+      "en": null
+    },
+    "relationship": {
+      "es": "Relación con esta persona",
+      "en": "Your relationship to this person"
+    },
+    "save": {
+      "es": "💾 GUARDAR PERSONA",
+      "en": "💾 SAVE PERSON"
+    }
+  },
+  "notify": {
+    "title": {
+      "es": "AVISAR A MI NÚCLEO",
+      "en": "NOTIFY MY CONTACTS"
+    },
+    "question": {
+      "es": "¿Cómo quieres avisar a las personas de tu núcleo?",
+      "en": "How would you like to notify your emergency contacts?"
+    },
+    "imSafe": {
+      "es": "🟢 ESTOY BIEN",
+      "en": "🟢 I'M SAFE"
+    },
+    "needHelp": {
+      "es": "🆘 NECESITO AYUDA",
+      "en": "🆘 I NEED HELP"
+    },
+    "back": {
+      "es": "↩️ VOLVER",
+      "en": "↩️ BACK"
+    }
+  },
+  "confirm": {
+    "safeTitle": {
+      "es": "🟢 ESTOY BIEN",
+      "en": "🟢 I'M SAFE"
+    },
+    "safeMessage": {
+      "es": "Vas a avisar a las personas de tu núcleo que estás bien.",
+      "en": "You are about to let your emergency contacts know you are safe."
+    },
+    "helpTitle": {
+      "es": "🆘 NECESITO AYUDA",
+      "en": "🆘 I NEED HELP"
+    },
+    "helpMessage": {
+      "es": "Vas a avisar a las personas de tu núcleo que necesitas ayuda.",
+      "en": "You are about to let your emergency contacts know you need help."
+    },
+    "confirm": {
+      "es": "CONFIRMAR AVISO",
+      "en": "CONFIRM ALERT"
+    },
+    "back": {
+      "es": "↩️ VOLVER",
+      "en": "↩️ BACK"
+    }
+  },
+  "sms": {
+    "safeText": {
+      "es": "ALERTA+: Estoy bien. No necesito ayuda en este momento.",
+      "en": "ALERTA+: I'm safe. I do not need help right now."
+    },
+    "helpText": {
+      "es": "ALERTA+: Necesito ayuda. Por favor, comunícate conmigo lo antes posible.",
+      "en": "ALERTA+: I need help. Please contact me as soon as possible."
+    },
+    "locationLine": {
+      "es": "Ubicación{accuracy}: {link}",
+      "en": null
+    },
+    "accuracy": {
+      "es": " (precisión aproximada: {meters} m)",
+      "en": null
+    },
+    "sent": {
+      "es": "SMS enviados a tu núcleo.",
+      "en": "Text messages sent to your contacts."
+    },
+    "noContacts": {
+      "es": "Primero agrega al menos una persona a tu núcleo.",
+      "en": "Add at least one emergency contact first."
+    },
+    "noPhones": {
+      "es": "Tu núcleo no tiene números de teléfono registrados.",
+      "en": "Your emergency contacts do not have phone numbers saved."
+    },
+    "noLocation": {
+      "es": "No fue posible obtener la ubicación; se enviará el aviso normal.",
+      "en": null
+    },
+    "locationDenied": {
+      "es": "Se enviará el aviso sin ubicación porque no se concedió el permiso.",
+      "en": null
+    }
+  },
+  "premium": {
+    "title": {
+      "es": "⭐ ALERTA+ PREMIUM",
+      "en": "⭐ ALERTA+ PREMIUM"
+    },
+    "description": {
+      "es": "Desbloquea guías de emergencia ampliadas, explicaciones más precisas e ilustraciones paso a paso para orientarte sobre cómo actuar.",
+      "en": "Unlock expanded emergency guides, clearer explanations, and step-by-step illustrations to help you know what to do."
+    },
+    "location": {
+      "es": "📍 Premium también incluye el envío de tu ubicación actual junto con el aviso de emergencia, para que tus contactos sepan dónde encontrarte.",
+      "en": null
+    },
+    "oneTimePayment": {
+      "es": "Pago único. Acceso permanente después de que Google Play confirme la compra.",
+      "en": "One-time payment. Permanent access after Google Play confirms your purchase."
+    },
+    "share": {
+      "es": "📲 COMPARTE ALERTA+ Y OBTÉN EL DESCUENTO",
+      "en": "📲 SHARE ALERTA+ TO GET THE DISCOUNT"
+    },
+    "shareTitle": {
+      "es": "Comparte ALERTA+",
+      "en": "Share ALERTA+"
+    },
+    "shareText": {
+      "es": "Te comparto ALERTA+, una guía de emergencia paso a paso. Descárgala aquí: ",
+      "en": "I'm sharing ALERTA+, a step-by-step emergency guide. Download it here: "
+    },
+    "buy": {
+      "es": "ADQUIRIR PREMIUM",
+      "en": "GET PREMIUM"
+    },
+    "active": {
+      "es": "PREMIUM ACTIVO",
+      "en": "PREMIUM ACTIVE"
+    },
+    "restore": {
+      "es": "RESTAURAR COMPRA",
+      "en": "RESTORE PURCHASE"
+    },
+    "back": {
+      "es": "VOLVER",
+      "en": "BACK"
+    },
+    "pricePending": {
+      "es": "El precio aparecerá cuando Premium esté disponible en Google Play.",
+      "en": "The price will appear when Premium is available on Google Play."
+    },
+    "promoPricePending": {
+      "es": "El precio promocional aparecerá cuando se configure en Google Play.",
+      "en": "The promotional price will appear once it is set up on Google Play."
+    },
+    "_googlePlayMessages": [
+      {
+        "es": "No se pudo conectar con Google Play.",
+        "en": "Could not connect to Google Play."
+      },
+      {
+        "es": "Se perdió la conexión con Google Play. Inténtalo de nuevo.",
+        "en": "The connection to Google Play was lost. Please try again."
+      },
+      {
+        "es": "No se pudo consultar el producto Premium en Google Play.",
+        "en": "Could not check the Premium product on Google Play."
+      },
+      {
+        "es": "Premium estará disponible cuando se configure en Google Play.",
+        "en": "Premium will be available after it is set up on Google Play."
+      },
+      {
+        "es": "La compra Premium todavía no está disponible en Google Play.",
+        "en": "Premium purchases are not available on Google Play yet."
+      },
+      {
+        "es": "Google Play no devolvió una oferta válida para Premium. Inténtalo de nuevo.",
+        "en": null
+      },
+      {
+        "es": "Google Play no pudo iniciar la compra. Inténtalo de nuevo.",
+        "en": "Google Play could not start the purchase. Please try again."
+      },
+      {
+        "es": "Premium ya está activo en esta cuenta de Google Play.",
+        "en": "Premium is already active on this Google Play account."
+      },
+      {
+        "es": "No se pudo restaurar la compra desde Google Play.",
+        "en": "Could not restore the purchase from Google Play."
+      },
+      {
+        "es": "Compra completada. Premium quedó habilitado permanentemente.",
+        "en": "Purchase complete. Premium is now permanently unlocked."
+      },
+      {
+        "es": "El pago está pendiente. Premium se habilitará cuando Google Play lo confirme.",
+        "en": "Payment is pending. Premium will unlock after Google Play confirms it."
+      },
+      {
+        "es": "Google Play no confirmó la compra. Puedes intentarlo de nuevo.",
+        "en": "Google Play did not confirm the purchase. You can try again."
+      },
+      {
+        "es": "Cancelaste la compra. No se realizó ningún cobro.",
+        "en": "You canceled the purchase. You were not charged."
+      },
+      {
+        "es": "No se completó la compra en Google Play. Inténtalo de nuevo.",
+        "en": "The Google Play purchase was not completed. Please try again."
+      },
+      {
+        "es": "Premium está activo, pero Google Play aún no confirmó el registro del pago.",
+        "en": "Premium is active, but Google Play has not confirmed the payment record yet."
+      },
+      {
+        "es": "No se pudo iniciar Google Play en este dispositivo.",
+        "en": "Google Play could not be started on this device."
+      }
+    ]
+  },
+  "language": {
+    "title": {
+      "es": "IDIOMA",
+      "en": "LANGUAGE"
+    },
+    "question": {
+      "es": "Selecciona el idioma de ALERTA+.",
+      "en": "Choose the ALERTA+ language."
+    },
+    "spanish": {
+      "es": "Español",
+      "en": "Español"
+    },
+    "english": {
+      "es": "English",
+      "en": "English"
+    },
+    "back": {
+      "es": "VOLVER",
+      "en": "BACK"
+    }
+  }
+}

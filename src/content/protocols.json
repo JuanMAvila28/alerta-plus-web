@@ -1,0 +1,502 @@
+{
+  "_description": "13 first aid protocols. Order = order of the 'I HAVE AN EMERGENCY' menu. Each step is shown and read aloud, one at a time. 'id' is the URL slug (/emergencia/:id).",
+  "protocols": [
+    {
+      "id": "herida",
+      "menuButton": {
+        "es": "🩹 HERIDA / CORTADURA",
+        "en": "🩹 CUT / WOUND"
+      },
+      "title": {
+        "es": "🩹 HERIDA / CORTADURA",
+        "en": "🩹 CUT / WOUND"
+      },
+      "steps": [
+        {
+          "es": "Mantén la calma y asegúrate de que el lugar sea seguro.",
+          "en": "Stay calm and make sure the area is safe."
+        },
+        {
+          "es": "Revisa la herida y observa si hay sangrado importante.",
+          "en": "Check the wound and look for serious bleeding."
+        },
+        {
+          "es": "Si sangra, coloca una gasa o tela limpia y ejerce presión directa.",
+          "en": "If it is bleeding, apply direct pressure with clean gauze or cloth."
+        },
+        {
+          "es": "Mantén la presión hasta controlar el sangrado.",
+          "en": "Keep applying pressure until the bleeding is controlled."
+        },
+        {
+          "es": "Cuando el sangrado esté controlado, cubre la herida con material limpio.",
+          "en": "Once the bleeding is controlled, cover the wound with clean material."
+        },
+        {
+          "es": "Vigila a la persona y busca ayuda médica si la herida es grave o el sangrado no se controla.",
+          "en": "Stay with the person and seek medical help if the wound is serious or the bleeding does not stop."
+        }
+      ]
+    },
+    {
+      "id": "fractura",
+      "menuButton": {
+        "es": "🦴 FRACTURA",
+        "en": "🦴 FRACTURE"
+      },
+      "title": {
+        "es": "🦴 FRACTURA",
+        "en": "🦴 FRACTURE"
+      },
+      "steps": [
+        {
+          "es": "Mantén la calma y asegúrate de que el lugar sea seguro.",
+          "en": "Stay calm and make sure the area is safe."
+        },
+        {
+          "es": "Evita mover la zona lesionada y no intentes enderezarla.",
+          "en": "Avoid moving the injured area. Do not try to straighten it."
+        },
+        {
+          "es": "Si hay una herida o sangrado, coloca una gasa o tela limpia y ejerce presión directa.",
+          "en": "If there is a wound or bleeding, apply direct pressure with clean gauze or cloth."
+        },
+        {
+          "es": "Mantén la zona lesionada lo más inmóvil posible.",
+          "en": "Keep the injured area as still as possible."
+        },
+        {
+          "es": "Si tienes material adecuado, puedes apoyar la zona sin apretar ni intentar corregir su posición.",
+          "en": "If suitable materials are available, support the area without tightening or trying to realign it."
+        },
+        {
+          "es": "Busca atención médica. Si la lesión es grave o la persona está en peligro, solicita ayuda de emergencia.",
+          "en": "Seek medical care. If the injury is serious or the person is in danger, call emergency services."
+        }
+      ]
+    },
+    {
+      "id": "quemadura",
+      "menuButton": {
+        "es": "🔥 QUEMADURA",
+        "en": "🔥 BURN"
+      },
+      "title": {
+        "es": "🔥 QUEMADURA",
+        "en": "🔥 BURN"
+      },
+      "steps": [
+        {
+          "es": "Aléjate de la fuente de calor y asegúrate de que el lugar sea seguro.",
+          "en": "Move away from the heat source and make sure the area is safe."
+        },
+        {
+          "es": "Enfría la zona quemada con agua corriente fresca durante varios minutos.",
+          "en": "Cool the burn under cool running water for several minutes."
+        },
+        {
+          "es": "Retira con cuidado objetos que puedan apretar la zona, como anillos o pulseras, si es posible hacerlo sin dificultad.",
+          "en": "Carefully remove items that could tighten around the area, such as rings or bracelets, if easy to do."
+        },
+        {
+          "es": "Cubre la quemadura suavemente con una gasa o tela limpia.",
+          "en": "Loosely cover the burn with clean gauze or cloth."
+        },
+        {
+          "es": "No revientes ampollas ni apliques hielo, cremas o sustancias caseras sobre la quemadura.",
+          "en": "Do not pop blisters or apply ice, creams, or home remedies to the burn."
+        },
+        {
+          "es": "Busca atención médica si la quemadura es extensa, profunda, afecta la cara, las manos o los genitales, o si la persona presenta dificultad para respirar.",
+          "en": "Seek medical care for a large or deep burn, burns to the face, hands, or genitals, or if the person has trouble breathing."
+        }
+      ]
+    },
+    {
+      "id": "electrocucion",
+      "menuButton": {
+        "es": "⚡ ELECTROCUCIÓN",
+        "en": "⚡ ELECTRIC SHOCK"
+      },
+      "title": {
+        "es": "⚡ ELECTROCUCIÓN",
+        "en": "⚡ ELECTRIC SHOCK"
+      },
+      "steps": [
+        {
+          "es": "Asegúrate de que el lugar sea seguro. No toques a la persona mientras siga en contacto con la electricidad.",
+          "en": "Make sure the area is safe. Do not touch the person while they are still in contact with electricity."
+        },
+        {
+          "es": "Si es posible hacerlo sin riesgo, corta la corriente desde un interruptor o dispositivo seguro.",
+          "en": "If it is safe, turn off the power using a switch or safe device."
+        },
+        {
+          "es": "Aléjate de cables caídos o instalaciones eléctricas dañadas. No intentes manipularlos.",
+          "en": "Stay away from fallen wires or damaged electrical equipment. Do not handle them."
+        },
+        {
+          "es": "Cuando sea seguro acercarte, revisa si la persona responde y respira normalmente.",
+          "en": "When it is safe to approach, check whether the person responds and is breathing normally."
+        },
+        {
+          "es": "Solicita ayuda de emergencia, especialmente si hubo pérdida de conocimiento, quemaduras o dificultad para respirar.",
+          "en": "Call emergency services, especially if there was loss of consciousness, burns, or trouble breathing."
+        },
+        {
+          "es": "La persona debe recibir valoración médica después de una descarga eléctrica.",
+          "en": "The person should receive medical evaluation after an electric shock."
+        }
+      ]
+    },
+    {
+      "id": "desmayo",
+      "menuButton": {
+        "es": "😵 DESMAYO / PÉRDIDA DE CONOCIMIENTO",
+        "en": "😵 FAINTING / LOSS OF CONSCIOUSNESS"
+      },
+      "title": {
+        "es": "😵 DESMAYO / PÉRDIDA DE CONOCIMIENTO",
+        "en": "😵 FAINTING / LOSS OF CONSCIOUSNESS"
+      },
+      "steps": [
+        {
+          "es": "Asegúrate de que el lugar sea seguro y comprueba si la persona responde.",
+          "en": "Make sure the area is safe and check whether the person responds."
+        },
+        {
+          "es": "Observa si respira normalmente.",
+          "en": "Check whether they are breathing normally."
+        },
+        {
+          "es": "Si no responde o no respira normalmente, solicita ayuda de emergencia de inmediato.",
+          "en": "If they do not respond or are not breathing normally, call emergency services immediately."
+        },
+        {
+          "es": "Si está respirando y no hay peligro, mantén a la persona en una posición segura y vigílala.",
+          "en": "If they are breathing and there is no danger, keep them in a safe position and monitor them."
+        },
+        {
+          "es": "No la dejes sola. Observa cambios en su estado mientras llega la ayuda.",
+          "en": "Do not leave them alone. Watch for changes in their condition while help is on the way."
+        },
+        {
+          "es": "Si el desmayo se repite, hubo una lesión o la persona no se recupera normalmente, necesita valoración médica.",
+          "en": "Seek medical care if fainting happens again, there was an injury, or the person does not recover normally."
+        }
+      ]
+    },
+    {
+      "id": "obstruccion",
+      "menuButton": {
+        "es": "😮 OBSTRUCCIÓN / ATRAGANTAMIENTO",
+        "en": "😮 CHOKING"
+      },
+      "title": {
+        "es": "😮 OBSTRUCCIÓN / ATRAGANTAMIENTO",
+        "en": "😮 CHOKING"
+      },
+      "steps": [
+        {
+          "es": "Comprueba si la persona puede hablar, respirar o toser.",
+          "en": "Check whether the person can speak, breathe, or cough."
+        },
+        {
+          "es": "Si puede toser o respirar, anímala a seguir tosiendo y obsérvala.",
+          "en": "If they can cough or breathe, encourage them to keep coughing and monitor them."
+        },
+        {
+          "es": "Si no puede respirar, hablar o toser normalmente, solicita ayuda de emergencia.",
+          "en": "If they cannot breathe, speak, or cough normally, call emergency services."
+        },
+        {
+          "es": "Sigue las instrucciones del servicio de emergencias y aplica únicamente las maniobras de primeros auxilios adecuadas para su edad.",
+          "en": "Follow emergency service instructions and use only first-aid techniques appropriate for their age."
+        },
+        {
+          "es": "No introduzcas los dedos a ciegas en la boca para intentar sacar el objeto.",
+          "en": "Do not blindly put your fingers in their mouth to remove the object."
+        },
+        {
+          "es": "Si la persona pierde el conocimiento o deja de respirar normalmente, sigue inmediatamente las instrucciones del servicio de emergencias.",
+          "en": "If the person becomes unconscious or stops breathing normally, immediately follow emergency service instructions."
+        }
+      ]
+    },
+    {
+      "id": "golpe_trauma",
+      "menuButton": {
+        "es": "🤕 GOLPE / TRAUMA",
+        "en": "🤕 INJURY / TRAUMA"
+      },
+      "title": {
+        "es": "🤕 GOLPE / TRAUMA",
+        "en": "🤕 INJURY / TRAUMA"
+      },
+      "steps": [
+        {
+          "es": "Asegúrate de que el lugar sea seguro antes de acercarte.",
+          "en": "Make sure the area is safe before approaching."
+        },
+        {
+          "es": "Comprueba si la persona responde y respira normalmente.",
+          "en": "Check whether the person responds and is breathing normally."
+        },
+        {
+          "es": "Observa si hay sangrado, dolor intenso, deformidad o dificultad para moverse.",
+          "en": "Look for bleeding, severe pain, deformity, or difficulty moving."
+        },
+        {
+          "es": "Evita mover innecesariamente a la persona, especialmente si sospechas una lesión de cabeza, cuello o espalda.",
+          "en": "Avoid moving the person unnecessarily, especially if you suspect a head, neck, or back injury."
+        },
+        {
+          "es": "Si hay sangrado, coloca una tela o gasa limpia y ejerce presión directa.",
+          "en": "If there is bleeding, apply direct pressure with clean cloth or gauze."
+        },
+        {
+          "es": "Solicita ayuda médica ante pérdida de conocimiento, dificultad para respirar, dolor intenso o cualquier lesión que parezca grave.",
+          "en": "Seek medical help for loss of consciousness, trouble breathing, severe pain, or any injury that seems serious."
+        }
+      ]
+    },
+    {
+      "id": "mordedura_picadura",
+      "menuButton": {
+        "es": "🐝 MORDEDURA / PICADURA",
+        "en": "🐝 BITE / STING"
+      },
+      "title": {
+        "es": "🐝 MORDEDURA / PICADURA",
+        "en": "🐝 BITE / STING"
+      },
+      "steps": [
+        {
+          "es": "Aléjate del animal o insecto y asegúrate de que el lugar sea seguro.",
+          "en": "Move away from the animal or insect and make sure the area is safe."
+        },
+        {
+          "es": "Observa a la persona y revisa si presenta dificultad para respirar o hinchazón importante.",
+          "en": "Check the person for trouble breathing or significant swelling."
+        },
+        {
+          "es": "Lava la zona afectada con agua y jabón cuando sea posible.",
+          "en": "Wash the affected area with soap and water when possible."
+        },
+        {
+          "es": "No cortes, succiones ni apliques sustancias caseras sobre una mordedura de serpiente.",
+          "en": "Do not cut, suck, or apply home remedies to a snakebite."
+        },
+        {
+          "es": "Si aparece dificultad para respirar, hinchazón de cara o lengua, mareo intenso u otros síntomas graves, solicita ayuda de emergencia.",
+          "en": "If trouble breathing, face or tongue swelling, severe dizziness, or other serious symptoms occur, call emergency services."
+        },
+        {
+          "es": "Busca valoración médica cuando la mordedura o picadura sea importante, desconocida o produzca síntomas preocupantes.",
+          "en": "Seek medical care for a serious or unknown bite or sting, or if concerning symptoms develop."
+        }
+      ]
+    },
+    {
+      "id": "ahogamiento",
+      "menuButton": {
+        "es": "🌊 AHOGAMIENTO",
+        "en": "🌊 DROWNING"
+      },
+      "title": {
+        "es": "🌊 AHOGAMIENTO",
+        "en": "🌊 DROWNING"
+      },
+      "steps": [
+        {
+          "es": "No te pongas en peligro. Acércate solamente cuando sea seguro hacerlo.",
+          "en": "Do not put yourself in danger. Approach only when it is safe."
+        },
+        {
+          "es": "Solicita ayuda de emergencia lo antes posible.",
+          "en": "Call emergency services as soon as possible."
+        },
+        {
+          "es": "Cuando sea seguro, comprueba si la persona responde y respira normalmente.",
+          "en": "When it is safe, check whether the person responds and is breathing normally."
+        },
+        {
+          "es": "Si no respira normalmente, sigue inmediatamente las instrucciones del servicio de emergencias.",
+          "en": "If they are not breathing normally, immediately follow emergency service instructions."
+        },
+        {
+          "es": "Si está respirando, vigílala continuamente y mantenla en una posición segura.",
+          "en": "If they are breathing, monitor them continuously and keep them in a safe position."
+        },
+        {
+          "es": "Aunque la persona parezca recuperarse, después de un ahogamiento necesita valoración médica.",
+          "en": "Even if the person seems to recover, they need medical evaluation after a drowning incident."
+        }
+      ]
+    },
+    {
+      "id": "convulsion",
+      "menuButton": {
+        "es": "⚠️ CONVULSIÓN",
+        "en": "⚠️ SEIZURE"
+      },
+      "title": {
+        "es": "⚠️ CONVULSIÓN",
+        "en": "⚠️ SEIZURE"
+      },
+      "steps": [
+        {
+          "es": "Mantén la calma y despeja objetos peligrosos alrededor de la persona.",
+          "en": "Stay calm and clear dangerous objects away from the person."
+        },
+        {
+          "es": "No intentes sujetarla ni detener sus movimientos.",
+          "en": "Do not hold them down or try to stop their movements."
+        },
+        {
+          "es": "No introduzcas objetos, alimentos ni líquidos en su boca.",
+          "en": "Do not put objects, food, or liquids in their mouth."
+        },
+        {
+          "es": "Observa cuánto dura la convulsión y permanece cerca de la persona.",
+          "en": "Note how long the seizure lasts and stay nearby."
+        },
+        {
+          "es": "Cuando termine, comprueba que respira normalmente y continúa vigilándola.",
+          "en": "When it ends, check that they are breathing normally and continue to monitor them."
+        },
+        {
+          "es": "Solicita ayuda de emergencia si es la primera convulsión, dura más de unos minutos, se repite, ocurrió en el agua o la persona no se recupera normalmente.",
+          "en": "Call emergency services if this is the first seizure, it lasts more than a few minutes, repeats, occurred in water, or the person does not recover normally."
+        }
+      ]
+    },
+    {
+      "id": "intoxicacion",
+      "menuButton": {
+        "es": "☠️ INTOXICACIÓN",
+        "en": "☠️ POISONING"
+      },
+      "title": {
+        "es": "☠️ INTOXICACIÓN",
+        "en": "☠️ POISONING"
+      },
+      "steps": [
+        {
+          "es": "Aléjate de la sustancia peligrosa y asegúrate de que el lugar sea seguro.",
+          "en": "Move away from the hazardous substance and make sure the area is safe."
+        },
+        {
+          "es": "Si la persona está inconsciente, tiene dificultad para respirar o presenta síntomas graves, solicita ayuda de emergencia.",
+          "en": "If the person is unconscious, has trouble breathing, or has severe symptoms, call emergency services."
+        },
+        {
+          "es": "No provoques el vómito ni des alimentos o bebidas, salvo que un profesional de emergencias lo indique.",
+          "en": "Do not induce vomiting or give food or drink unless an emergency professional tells you to."
+        },
+        {
+          "es": "Si es seguro hacerlo, identifica la sustancia involucrada y conserva su envase para informar al personal de salud.",
+          "en": "If it is safe, identify the substance and keep its container to show medical staff."
+        },
+        {
+          "es": "Si hubo contacto con ojos o piel, sigue las indicaciones del servicio de emergencias o de un profesional de salud.",
+          "en": "If it contacted the eyes or skin, follow emergency service or healthcare professional instructions."
+        },
+        {
+          "es": "Solicita orientación médica o de un centro especializado en intoxicaciones, especialmente si desconoces la sustancia.",
+          "en": "Seek medical advice or contact a poison center, especially if you do not know the substance."
+        }
+      ]
+    },
+    {
+      "id": "dificultad_respirar",
+      "menuButton": {
+        "es": "🫁 DIFICULTAD PARA RESPIRAR",
+        "en": "🫁 TROUBLE BREATHING"
+      },
+      "title": {
+        "es": "🫁 DIFICULTAD PARA RESPIRAR",
+        "en": "🫁 TROUBLE BREATHING"
+      },
+      "steps": [
+        {
+          "es": "Mantén la calma y coloca a la persona en una posición cómoda para respirar.",
+          "en": "Stay calm and place the person in a comfortable position for breathing."
+        },
+        {
+          "es": "Observa si la dificultad para respirar es intensa, repentina o está empeorando.",
+          "en": "Check whether the breathing difficulty is severe, sudden, or getting worse."
+        },
+        {
+          "es": "Solicita ayuda de emergencia ante una dificultad respiratoria importante.",
+          "en": "Call emergency services for significant breathing difficulty."
+        },
+        {
+          "es": "Si la persona tiene un medicamento de emergencia que le fue indicado por un profesional, ayúdala a utilizarlo según sus instrucciones.",
+          "en": "If a professional prescribed emergency medicine for the person, help them use it as directed."
+        },
+        {
+          "es": "Permanece con la persona y vigila si cambia su estado.",
+          "en": "Stay with the person and watch for changes in their condition."
+        },
+        {
+          "es": "Si deja de responder o no respira normalmente, sigue inmediatamente las instrucciones del servicio de emergencias.",
+          "en": "If they stop responding or are not breathing normally, immediately follow emergency service instructions."
+        }
+      ]
+    },
+    {
+      "id": "otra_emergencia",
+      "menuButton": {
+        "es": "🚑 OTRA EMERGENCIA",
+        "en": "🚑 OTHER EMERGENCY"
+      },
+      "title": {
+        "es": "🚑 OTRA EMERGENCIA — ORIENTACIÓN GENERAL",
+        "en": "🚑 OTHER EMERGENCY — GENERAL GUIDANCE"
+      },
+      "steps": [
+        {
+          "es": "Mantén la calma.",
+          "en": "Stay calm."
+        },
+        {
+          "es": "Asegúrate de que el lugar sea seguro antes de acercarte.",
+          "en": "Make sure the area is safe before approaching."
+        },
+        {
+          "es": "Comprueba cómo se encuentra la persona y si responde normalmente.",
+          "en": "Check the person's condition and whether they respond normally."
+        },
+        {
+          "es": "Si está consciente, pregúntale qué ocurrió y qué necesita.",
+          "en": "If they are conscious, ask what happened and what they need."
+        },
+        {
+          "es": "Ayúdala a adoptar una posición cómoda y segura.",
+          "en": "Help them get into a comfortable, safe position."
+        },
+        {
+          "es": "No la dejes sola mientras llega ayuda.",
+          "en": "Stay with them until help arrives."
+        },
+        {
+          "es": "Si hay otra persona disponible, pídele que busque ayuda o contacte a emergencias.",
+          "en": "If someone else is available, ask them to get help or contact emergency services."
+        },
+        {
+          "es": "No administres medicamentos, alimentos o bebidas si no sabes si son apropiados.",
+          "en": "Do not give medication, food, or drinks unless you know they are appropriate."
+        },
+        {
+          "es": "Vigila continuamente cualquier cambio en su estado.",
+          "en": "Continuously monitor any changes in their condition."
+        },
+        {
+          "es": "Si la situación es grave o empeora, solicita ayuda de emergencia inmediatamente.",
+          "en": "If the situation is serious or gets worse, call emergency services immediately."
+        }
+      ]
+    }
+  ]
+}

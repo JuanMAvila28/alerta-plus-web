@@ -1,0 +1,915 @@
+{
+  "_description": "Premium-only content. 'illustration' is the id of an SVG (see public/illustrations/). 'correct' is the (0-based) index of the correct option.",
+  "intro": {
+    "title": {
+      "es": "PREMIUM INCLUYE",
+      "en": null
+    },
+    "benefits": [
+      {
+        "icon": "🧭",
+        "title": {
+          "es": "Guías ilustradas paso a paso",
+          "en": null
+        },
+        "detail": {
+          "es": "Un diagrama propio acompaña cada indicación y funciona sin conexión.",
+          "en": null
+        }
+      },
+      {
+        "icon": "💡",
+        "title": {
+          "es": "Explicaciones ampliadas",
+          "en": null
+        },
+        "detail": {
+          "es": "Entiende por qué importa cada paso y qué cambios debes comunicar al pedir ayuda.",
+          "en": null
+        }
+      },
+      {
+        "icon": "🧠",
+        "title": {
+          "es": "Modo de práctica",
+          "en": null
+        },
+        "detail": {
+          "es": "Preguntas cortas para que la familia recuerde las decisiones seguras antes de una emergencia.",
+          "en": null
+        }
+      },
+      {
+        "icon": "🏠",
+        "title": {
+          "es": "Preparación para el hogar",
+          "en": null
+        },
+        "detail": {
+          "es": "Integra las guías con el kit, botiquín y plan familiar que ya tienes en ALERTA+.",
+          "en": null
+        }
+      }
+    ]
+  },
+  "library": {
+    "title": {
+      "es": "⭐ TU BIBLIOTECA PREMIUM",
+      "en": null
+    },
+    "subtitle": {
+      "es": "Guías ilustradas",
+      "en": null
+    },
+    "description": {
+      "es": "Elige una situación. Los pasos básicos siguen disponibles en la versión gratuita.",
+      "en": null
+    },
+    "practiceButton": {
+      "es": "🧠 PRACTICAR EN FAMILIA",
+      "en": null
+    },
+    "previousButton": {
+      "es": "ANTERIOR",
+      "en": null
+    },
+    "nextButton": {
+      "es": "SIGUIENTE",
+      "en": null
+    },
+    "backToGuidesButton": {
+      "es": "VOLVER A LAS GUÍAS",
+      "en": null
+    },
+    "guides": [
+      {
+        "title": {
+          "es": "Heridas y sangrado",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Primero verifica que el lugar sea seguro.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Evita que el peligro alcance también a quien ayuda. Si la escena no es segura, aléjate y solicita apoyo.",
+              "en": null
+            },
+            "illustration": "safety",
+            "label": {
+              "es": "PROTÉGETE ANTES DE ACERCARTE",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Si hay sangrado, usa una gasa o tela limpia y presiona directamente.",
+              "en": null
+            },
+            "explanation": {
+              "es": "La presión directa ayuda a controlar el sangrado externo. Mantén la atención en la persona y pide ayuda si el sangrado es intenso o no se controla.",
+              "en": null
+            },
+            "illustration": "wound",
+            "label": {
+              "es": "PRESIÓN DIRECTA CON MATERIAL LIMPIO",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Busca atención si la herida es grave o la persona empeora.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Al pedir ayuda, indica dónde estás, qué ocurrió y si la persona responde y respira normalmente.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "EXPLICA LA SITUACIÓN Y LA UBICACIÓN",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Fracturas",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Comprueba que la escena sea segura.",
+              "en": null
+            },
+            "explanation": {
+              "es": "No te acerques si persiste un peligro activo. Pide a otra persona que llame mientras tú observas desde un lugar seguro.",
+              "en": null
+            },
+            "illustration": "safety",
+            "label": {
+              "es": "ESCENA SEGURA PRIMERO",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Evita mover o enderezar la zona lesionada.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Mover una lesión puede aumentar el dolor o empeorarla. No intentes recolocar huesos ni fuerces una postura.",
+              "en": null
+            },
+            "illustration": "immobilize",
+            "label": {
+              "es": "NO FUERCES MOVIMIENTOS",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Solicita valoración médica, especialmente si parece grave.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Describe el dolor, la lesión y cualquier cambio en el estado de la persona. Sigue las indicaciones del servicio de emergencias.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "PIDE AYUDA PROFESIONAL",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Quemaduras",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Aléjate de la fuente de calor sin ponerte en riesgo.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Antes de ayudar, evita el contacto con el peligro. No vuelvas a entrar en una zona insegura.",
+              "en": null
+            },
+            "illustration": "safety",
+            "label": {
+              "es": "ALÉJATE DE LA FUENTE DE CALOR",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Enfría la zona con agua corriente fresca.",
+              "en": null
+            },
+            "explanation": {
+              "es": "El agua ayuda a enfriar la quemadura. No uses hielo ni remedios caseros; evita manipular la piel lesionada.",
+              "en": null
+            },
+            "illustration": "water",
+            "label": {
+              "es": "AGUA CORRIENTE FRESCA",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Busca atención si es extensa, profunda o afecta zonas delicadas.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Explica el tamaño aproximado, la zona afectada y si hay dificultad para respirar. Ante señales graves, llama a emergencias.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "IDENTIFICA LA GRAVEDAD Y PIDE AYUDA",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Descarga eléctrica",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "No toques a la persona si sigue en contacto con electricidad.",
+              "en": null
+            },
+            "explanation": {
+              "es": "La corriente puede alcanzar a quien intenta ayudar. Mantén distancia de cables y equipos dañados.",
+              "en": null
+            },
+            "illustration": "electricity",
+            "label": {
+              "es": "NO TOQUES CABLES NI A LA PERSONA",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Corta la corriente solo si puedes hacerlo sin riesgo.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Usa un interruptor o corte seguro. Si no puedes hacerlo con seguridad, aléjate y espera al personal capacitado.",
+              "en": null
+            },
+            "illustration": "electricity",
+            "label": {
+              "es": "CORTA LA ENERGÍA SOLO SI ES SEGURO",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Cuando sea seguro, comprueba su respuesta y respiración y pide ayuda.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Una descarga requiere valoración profesional, aunque la persona parezca recuperarse. Sigue las instrucciones del servicio de emergencias.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "VALORA Y ACTIVA EMERGENCIAS",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Desmayo o pérdida de conocimiento",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Asegura la escena y observa si responde.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Habla con la persona y fíjate si responde con normalidad. No la sacudas ni la muevas si sospechas una lesión.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "OBSERVA SIN SACUDIR",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Comprueba si respira normalmente.",
+              "en": null
+            },
+            "explanation": {
+              "es": "La falta de respuesta o una respiración anormal requiere activar ayuda urgente. Si tienes dudas, llama y sigue las indicaciones del operador.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "REVISA LA RESPIRACIÓN",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "No la dejes sola; observa cualquier cambio.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Permanece cerca, vigila su estado y comunica a emergencias si empeora o no se recupera normalmente.",
+              "en": null
+            },
+            "illustration": "accompany",
+            "label": {
+              "es": "ACOMPAÑA Y VIGILA",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Atragantamiento",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Observa si puede hablar, respirar o toser.",
+              "en": null
+            },
+            "explanation": {
+              "es": "La capacidad de hablar, respirar o toser ayuda a reconocer si la obstrucción es grave. Mantén la calma y pide ayuda cercana.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "OBSERVA HABLA, RESPIRACIÓN Y TOS",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Si no puede respirar o hablar, activa emergencias.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Pide a alguien que llame al servicio local de emergencias. No retrases la llamada ante una obstrucción grave.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "PIDE AYUDA URGENTE",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Sigue las instrucciones del operador y no introduzcas los dedos a ciegas.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Las maniobras dependen de la edad y la situación. Sigue instrucciones profesionales y no intentes sacar un objeto que no ves.",
+              "en": null
+            },
+            "illustration": "safety",
+            "label": {
+              "es": "SIGUE GUÍA PROFESIONAL; NO BUSQUES A CIEGAS",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Golpe o trauma",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Mira si hay peligro antes de acercarte.",
+              "en": null
+            },
+            "explanation": {
+              "es": "El lugar puede seguir siendo inseguro después de un accidente. No te expongas a tráfico, fuego, estructuras inestables u otros riesgos.",
+              "en": null
+            },
+            "illustration": "safety",
+            "label": {
+              "es": "REVISA LA ESCENA",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Observa respuesta, respiración y sangrado visible.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Comunica de inmediato cualquier dificultad para respirar, pérdida de conocimiento o sangrado importante.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "OBSERVA CAMBIOS IMPORTANTES",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Evita mover a la persona si sospechas lesión de cabeza, cuello o espalda.",
+              "en": null
+            },
+            "explanation": {
+              "es": "No le pidas que se levante o camine. Espera asistencia profesional y mantén a la persona vigilada.",
+              "en": null
+            },
+            "illustration": "immobilize",
+            "label": {
+              "es": "EVITA MOVIMIENTOS INNECESARIOS",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Mordedura o picadura",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Aléjate del animal o insecto y protege a quienes están cerca.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Evita otro contacto y no intentes capturar al animal. La seguridad de las personas es lo primero.",
+              "en": null
+            },
+            "illustration": "safety",
+            "label": {
+              "es": "ALÉJATE DEL RIESGO",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Observa si aparece dificultad para respirar o hinchazón importante.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Una reacción grave requiere ayuda urgente. Describe cuándo ocurrió y qué cambios observas.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "VIGILA REACCIONES GRAVES",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Busca valoración médica si hay síntomas preocupantes.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Si se trata de una serpiente, no cortes ni succiones la herida. Conserva distancia y sigue instrucciones profesionales.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "EVITA REMEDIOS PELIGROSOS",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Ahogamiento",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "No te pongas en peligro al intentar rescatar.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Una persona que ayuda también puede quedar en riesgo. Pide apoyo y usa únicamente una forma de ayuda que no te exponga.",
+              "en": null
+            },
+            "illustration": "water",
+            "label": {
+              "es": "RESCATE SEGURO",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Pide ayuda de emergencia lo antes posible.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Indica el lugar exacto y que hubo un incidente en el agua. Si hay otras personas, asígnales tareas concretas.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "COMPARTE EL LUGAR DEL INCIDENTE",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Aunque parezca recuperarse, necesita valoración médica.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Permanece con la persona y vigila cambios mientras llega ayuda. Sigue las instrucciones del servicio de emergencias.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "VIGILA Y SOLICITA VALORACIÓN",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Convulsión",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Despeja objetos peligrosos alrededor.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Haz espacio para reducir golpes. Mide el tiempo desde el inicio y permanece cerca sin sujetar a la persona.",
+              "en": null
+            },
+            "illustration": "space",
+            "label": {
+              "es": "DESPEJA EL ÁREA",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "No la sujetes ni pongas objetos en su boca.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Intentar detener los movimientos o introducir algo en la boca puede causar lesiones. No ofrezcas comida o bebida durante la convulsión.",
+              "en": null
+            },
+            "illustration": "space",
+            "label": {
+              "es": "NO SUJETES NI INTRODUZCAS OBJETOS",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Pide ayuda si es la primera convulsión, dura más de cinco minutos o se repite.",
+              "en": null
+            },
+            "explanation": {
+              "es": "También se recomienda activar emergencias si ocurrió en el agua, hay lesión, dificultad respiratoria o no recupera su estado habitual.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "IDENTIFICA CUÁNDO ES URGENTE",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Intoxicación",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Aléjate de la sustancia y evita el contacto.",
+              "en": null
+            },
+            "explanation": {
+              "es": "No te expongas al producto. Si el aire o el lugar parecen peligrosos, sal de allí y pide ayuda.",
+              "en": null
+            },
+            "illustration": "substance",
+            "label": {
+              "es": "EVITA EXPONERTE",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Ante síntomas graves, llama a emergencias o a un centro de toxicología.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Ten a mano el nombre del producto, la cantidad aproximada y la hora, si los conoces. No retrases la llamada para buscar esos datos.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "COMUNICA PRODUCTO Y HORA",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "No provoques el vómito ni des alimentos o bebidas salvo indicación profesional.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Conserva el envase para informar al personal de salud y sigue sus instrucciones específicas.",
+              "en": null
+            },
+            "illustration": "substance",
+            "label": {
+              "es": "NO PROVOQUES EL VÓMITO",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Dificultad para respirar",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Mantén la calma y permite que la persona adopte una posición cómoda.",
+              "en": null
+            },
+            "explanation": {
+              "es": "No la obligues a acostarse o caminar. Reduce aglomeraciones y mantén el entorno tranquilo.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "POSICIÓN CÓMODA",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Activa emergencias si la dificultad es intensa o empeora.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Al llamar, indica si comenzó de repente, si está empeorando y si la persona puede hablar con normalidad.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "PIDE AYUDA ANTE SEÑALES GRAVES",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Permanece con la persona y observa cambios.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Ayuda solo con medicamentos de emergencia que le hayan sido indicados a esa persona, siguiendo sus instrucciones. No improvises tratamientos.",
+              "en": null
+            },
+            "illustration": "accompany",
+            "label": {
+              "es": "ACOMPAÑA Y VIGILA",
+              "en": null
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "es": "Otra emergencia",
+          "en": null
+        },
+        "steps": [
+          {
+            "action": {
+              "es": "Mantén la calma y comprueba que el lugar sea seguro.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Antes de acercarte, identifica peligros para ti y para otras personas. Pide ayuda si no puedes controlar el riesgo.",
+              "en": null
+            },
+            "illustration": "safety",
+            "label": {
+              "es": "PROTÉGETE PRIMERO",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Observa si la persona responde y respira normalmente.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Si no responde o no respira con normalidad, activa emergencias de inmediato y sigue las instrucciones del operador.",
+              "en": null
+            },
+            "illustration": "breathe",
+            "label": {
+              "es": "OBSERVA RESPUESTA Y RESPIRACIÓN",
+              "en": null
+            }
+          },
+          {
+            "action": {
+              "es": "Explica qué ocurrió, dónde estás y qué ayuda se necesita.",
+              "en": null
+            },
+            "explanation": {
+              "es": "Una ubicación clara y una descripción breve ayudan a orientar la respuesta. No administres tratamientos que no conoces.",
+              "en": null
+            },
+            "illustration": "call",
+            "label": {
+              "es": "COMUNICA LUGAR Y SITUACIÓN",
+              "en": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "practice": {
+    "counter": {
+      "es": "Pregunta {current} de {total}",
+      "en": null
+    },
+    "continueButton": {
+      "es": "CONTINUAR",
+      "en": null
+    },
+    "backButton": {
+      "es": "VOLVER A PREMIUM",
+      "en": null
+    },
+    "end": {
+      "title": {
+        "es": "Práctica terminada",
+        "en": null
+      },
+      "result": {
+        "es": "Respuestas correctas: {score} de {total}",
+        "en": null
+      },
+      "note": {
+        "es": "Repasa las guías cuando quieras. Este ejercicio es educativo y no reemplaza capacitación profesional.",
+        "en": null
+      },
+      "repeatButton": {
+        "es": "REPETIR PRÁCTICA",
+        "en": null
+      }
+    },
+    "questions": [
+      {
+        "question": {
+          "es": "¿Qué haces antes de acercarte a una emergencia?",
+          "en": null
+        },
+        "options": [
+          {
+            "es": "Compruebo que el lugar sea seguro",
+            "en": null
+          },
+          {
+            "es": "Corro sin mirar",
+            "en": null
+          }
+        ],
+        "correct": 0,
+        "explanation": {
+          "es": "Evitar que quien ayuda también resulte afectado es el primer paso.",
+          "en": null
+        }
+      },
+      {
+        "question": {
+          "es": "Si alguien recibe una descarga, ¿debes tocarlo mientras sigue conectado a la corriente?",
+          "en": null
+        },
+        "options": [
+          {
+            "es": "Sí, de inmediato",
+            "en": null
+          },
+          {
+            "es": "No; primero debe ser seguro cortar la corriente",
+            "en": null
+          }
+        ],
+        "correct": 1,
+        "explanation": {
+          "es": "La corriente también puede alcanzar a quien intenta ayudar.",
+          "en": null
+        }
+      },
+      {
+        "question": {
+          "es": "Durante una convulsión, ¿debes sujetar a la persona o poner algo en su boca?",
+          "en": null
+        },
+        "options": [
+          {
+            "es": "No",
+            "en": "No"
+          },
+          {
+            "es": "Sí, para detenerla",
+            "en": null
+          }
+        ],
+        "correct": 0,
+        "explanation": {
+          "es": "Despeja el espacio, no la sujetes ni introduzcas objetos.",
+          "en": null
+        }
+      },
+      {
+        "question": {
+          "es": "Ante una intoxicación, ¿conviene provocar el vómito por cuenta propia?",
+          "en": null
+        },
+        "options": [
+          {
+            "es": "Sí",
+            "en": "Yes"
+          },
+          {
+            "es": "No; sigue orientación profesional",
+            "en": null
+          }
+        ],
+        "correct": 1,
+        "explanation": {
+          "es": "No provoques el vómito ni des alimentos o bebidas salvo que un profesional lo indique.",
+          "en": null
+        }
+      },
+      {
+        "question": {
+          "es": "¿Qué información ayuda al pedir ayuda?",
+          "en": null
+        },
+        "options": [
+          {
+            "es": "La ubicación y qué ocurrió",
+            "en": null
+          },
+          {
+            "es": "Solo mi nombre",
+            "en": null
+          }
+        ],
+        "correct": 0,
+        "explanation": {
+          "es": "Indica dónde estás, qué ocurrió y cómo se encuentra la persona.",
+          "en": null
+        }
+      }
+    ]
+  }
+}

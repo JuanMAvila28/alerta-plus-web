@@ -1,0 +1,228 @@
+{
+  "_description": "Checkable lists. Progress is stored by item id, not by text.",
+  "kit": {
+    "title": {
+      "es": "🎒 KIT DE EMERGENCIA",
+      "en": "🎒 EMERGENCY KIT"
+    },
+    "description": {
+      "es": "Marca cada elemento cuando ya lo tengas preparado.",
+      "en": "Check each item once you have it ready."
+    },
+    "items": [
+      {
+        "id": "kit_1",
+        "text": {
+          "es": "💧 Agua",
+          "en": "💧 Water"
+        }
+      },
+      {
+        "id": "kit_2",
+        "text": {
+          "es": "🔦 Linterna",
+          "en": "🔦 Flashlight"
+        }
+      },
+      {
+        "id": "kit_3",
+        "text": {
+          "es": "🔋 Baterías",
+          "en": "🔋 Batteries"
+        }
+      },
+      {
+        "id": "kit_4",
+        "text": {
+          "es": "📻 Radio",
+          "en": "📻 Radio"
+        }
+      },
+      {
+        "id": "kit_5",
+        "text": {
+          "es": "🩹 Botiquín",
+          "en": "🩹 First aid kit"
+        }
+      },
+      {
+        "id": "kit_6",
+        "text": {
+          "es": "📄 Documentos importantes",
+          "en": "📄 Important documents"
+        }
+      },
+      {
+        "id": "kit_7",
+        "text": {
+          "es": "🔌 Cargador o batería externa",
+          "en": "🔌 Charger or power bank"
+        }
+      },
+      {
+        "id": "kit_8",
+        "text": {
+          "es": "🥫 Alimentos",
+          "en": "🥫 Food"
+        }
+      },
+      {
+        "id": "kit_9",
+        "text": {
+          "es": "🐶 Elementos para mascotas",
+          "en": "🐶 Pet supplies"
+        }
+      }
+    ]
+  },
+  "firstAidKit": {
+    "title": {
+      "es": "🩹 BOTIQUÍN DE EMERGENCIA",
+      "en": "🩹 EMERGENCY FIRST AID KIT"
+    },
+    "description": {
+      "es": "Marca cada elemento cuando ya lo tengas preparado.",
+      "en": "Check each item once you have it ready."
+    },
+    "items": [
+      {
+        "id": "firstAidKit_1",
+        "text": {
+          "es": "🩹 Curitas",
+          "en": "🩹 Adhesive bandages"
+        }
+      },
+      {
+        "id": "firstAidKit_2",
+        "text": {
+          "es": "🧻 Gasas estériles",
+          "en": "🧻 Sterile gauze"
+        }
+      },
+      {
+        "id": "firstAidKit_3",
+        "text": {
+          "es": "🩺 Vendas",
+          "en": "🩺 Bandages"
+        }
+      },
+      {
+        "id": "firstAidKit_4",
+        "text": {
+          "es": "🧤 Guantes desechables",
+          "en": "🧤 Disposable gloves"
+        }
+      },
+      {
+        "id": "firstAidKit_5",
+        "text": {
+          "es": "🧴 Antiséptico",
+          "en": "🧴 Antiseptic"
+        }
+      },
+      {
+        "id": "firstAidKit_6",
+        "text": {
+          "es": "✂️ Tijeras",
+          "en": "✂️ Scissors"
+        }
+      },
+      {
+        "id": "firstAidKit_7",
+        "text": {
+          "es": "🌡️ Termómetro",
+          "en": "🌡️ Thermometer"
+        }
+      },
+      {
+        "id": "firstAidKit_8",
+        "text": {
+          "es": "🧊 Compresas frías",
+          "en": "🧊 Cold packs"
+        }
+      },
+      {
+        "id": "firstAidKit_9",
+        "text": {
+          "es": "💊 Medicamentos personales",
+          "en": "💊 Personal medication"
+        }
+      }
+    ]
+  },
+  "checklist": {
+    "title": {
+      "es": "✅ CHECKLIST PREVIO",
+      "en": "✅ PRE-EVENT CHECKLIST"
+    },
+    "description": {
+      "es": "Revisa estos puntos antes de una emergencia.",
+      "en": "Review these items before an emergency."
+    },
+    "items": [
+      {
+        "id": "checklist_1",
+        "text": {
+          "es": "🏠 Identifiqué las zonas seguras de mi vivienda",
+          "en": "🏠 I identified the safe areas in my home"
+        }
+      },
+      {
+        "id": "checklist_2",
+        "text": {
+          "es": "🚪 Tengo clara la ruta de evacuación",
+          "en": "🚪 I know the evacuation route"
+        }
+      },
+      {
+        "id": "checklist_3",
+        "text": {
+          "es": "📍 Tenemos definido un punto de encuentro familiar",
+          "en": "📍 We have a family meeting point"
+        }
+      },
+      {
+        "id": "checklist_4",
+        "text": {
+          "es": "🪑 Aseguré muebles y objetos que puedan caer",
+          "en": "🪑 I secured furniture and objects that could fall"
+        }
+      },
+      {
+        "id": "checklist_5",
+        "text": {
+          "es": "🔥 Sé dónde están los registros de gas, agua y energía",
+          "en": "🔥 I know where the gas, water, and power shutoffs are"
+        }
+      },
+      {
+        "id": "checklist_6",
+        "text": {
+          "es": "📄 Tengo copias de documentos importantes",
+          "en": "📄 I have copies of important documents"
+        }
+      },
+      {
+        "id": "checklist_7",
+        "text": {
+          "es": "👨‍👩‍👧‍👦 Mi familia conoce el plan de emergencia",
+          "en": "👨‍👩‍👧‍👦 My family knows the emergency plan"
+        }
+      },
+      {
+        "id": "checklist_8",
+        "text": {
+          "es": "🐶 Incluí a mis mascotas en el plan",
+          "en": "🐶 I included my pets in the plan"
+        }
+      },
+      {
+        "id": "checklist_9",
+        "text": {
+          "es": "🧑‍🚒 Hemos practicado un simulacro",
+          "en": "🧑‍🚒 We have practiced an emergency drill"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "_description": "'SET UP MY HOME' screen. On Android each field was a button that cycled through the options (the PWA uses a segmented control). The stored value is the option's 'value' (the earthquake rules compare against it); only the label is translated.",
+  "title": {
+    "es": "CONFIGURAR MI VIVIENDA",
+    "en": "SET UP MY HOME"
+  },
+  "description": {
+    "es": "Esta información permitirá que ALERTA+ adapte las instrucciones de emergencia a tu vivienda.",
+    "en": "This information helps ALERTA+ tailor emergency instructions to your home."
+  },
+  "fields": [
+    {
+      "key": "homeType",
+      "label": {
+        "es": "TIPO DE VIVIENDA",
+        "en": "TYPE OF HOME"
+      },
+      "options": [
+        {
+          "value": "house",
+          "label": {
+            "es": "Casa",
+            "en": "House"
+          }
+        },
+        {
+          "value": "apartment",
+          "label": {
+            "es": "Apartamento",
+            "en": "Apartment"
+          }
+        }
+      ],
+      "default": "house"
+    },
+    {
+      "key": "floor",
+      "label": {
+        "es": "PISO DONDE VIVO",
+        "en": "FLOOR WHERE I LIVE"
+      },
+      "options": [
+        {
+          "value": "first",
+          "label": {
+            "es": "Primer piso",
+            "en": "First floor"
+          }
+        },
+        {
+          "value": "second",
+          "label": {
+            "es": "Segundo piso",
+            "en": "Second floor"
+          }
+        },
+        {
+          "value": "thirdOrHigher",
+          "label": {
+            "es": "Tercer piso o más",
+            "en": "Third floor or higher"
+          }
+        }
+      ],
+      "default": "first"
+    },
+    {
+      "key": "streetAccess",
+      "label": {
+        "es": "¿TENGO SALIDA DIRECTA A LA CALLE?",
+        "en": "IS THERE A DIRECT EXIT TO THE STREET?"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "es": "Sí",
+            "en": "Yes"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "es": "No",
+            "en": "No"
+          }
+        }
+      ],
+      "default": "yes"
+    },
+    {
+      "key": "stairs",
+      "label": {
+        "es": "¿HAY ESCALERAS?",
+        "en": "ARE THERE STAIRS?"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "es": "Sí",
+            "en": "Yes"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "es": "No",
+            "en": "No"
+          }
+        }
+      ],
+      "default": "yes"
+    },
+    {
+      "key": "elevator",
+      "label": {
+        "es": "¿HAY ASCENSOR?",
+        "en": "IS THERE AN ELEVATOR?"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "es": "Sí",
+            "en": "Yes"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "es": "No",
+            "en": "No"
+          }
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "key": "emergencyExit",
+      "label": {
+        "es": "TIPO DE SALIDA DE EMERGENCIA",
+        "en": "TYPE OF EMERGENCY EXIT"
+      },
+      "options": [
+        {
+          "value": "direct",
+          "label": {
+            "es": "Salida directa",
+            "en": "Direct exit"
+          }
+        },
+        {
+          "value": "stairs",
+          "label": {
+            "es": "Escaleras",
+            "en": "Stairs"
+          }
+        },
+        {
+          "value": "other",
+          "label": {
+            "es": "Otra",
+            "en": "Other"
+          }
+        }
+      ],
+      "default": "direct"
+    },
+    {
+      "key": "evacuationRoute",
+      "label": {
+        "es": "¿TENGO UNA RUTA DE EVACUACIÓN DEFINIDA?",
+        "en": "DO YOU HAVE A DEFINED EVACUATION ROUTE?"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "es": "Sí",
+            "en": "Yes"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "es": "No",
+            "en": "No"
+          }
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "key": "meetingPoint",
+      "label": {
+        "es": "¿TENGO UN PUNTO DE ENCUENTRO?",
+        "en": "DO YOU HAVE A MEETING POINT?"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "es": "Sí",
+            "en": "Yes"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "es": "No",
+            "en": "No"
+          }
+        }
+      ],
+      "default": "no"
+    }
+  ],
+  "saveButton": {
+    "es": "GUARDAR CONFIGURACIÓN",
+    "en": "SAVE SETTINGS"
+  },
+  "backButton": {
+    "es": "↩️ VOLVER",
+    "en": "↩️ BACK"
+  }
+}
