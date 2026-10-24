@@ -36,7 +36,7 @@ test('opened from a shortcut (no tap yet): asks for ▶ COMENZAR, then reads', a
 test('a protocol from the emergency menu reads to the end and goes back to emergencies', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('link', { name: 'TENGO UNA EMERGENCIA' }).click();
-  await expect(page.getByRole('link', { name: /^🩹 HERIDA/ })).toBeVisible();
+  await expect(page.getByRole('link', { name: /^HERIDA/ })).toBeVisible();
   await expect(page.locator('nav a')).toHaveCount(13);
 
   await page.getByRole('link', { name: /QUEMADURA/ }).click();
