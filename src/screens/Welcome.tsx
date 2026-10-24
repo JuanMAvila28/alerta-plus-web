@@ -49,7 +49,7 @@ export default function Welcome() {
       <h1 className="text-center text-[28px] font-bold">{t(w.title)}</h1>
       <p className="text-lg">{t(w.whatWeSave)}</p>
       <p className="text-lg">{t(w.noLocation)}</p>
-      <a href={PRIVACY_URL} target="_blank" rel="noopener noreferrer" className="py-2 text-lg text-alert-blue underline">
+      <a href={PRIVACY_URL} target="_blank" rel="noopener noreferrer" className="flex min-h-12 items-center text-lg text-alert-blue underline">
         {t(w.readPolicy)}
       </a>
 

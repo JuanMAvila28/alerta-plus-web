@@ -1,0 +1,15 @@
+# Worker for the end-to-end tests (npm run test:e2e). Own database, no rate limit, fake Google keys.
+name = "alerta-plus-api-e2e"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+
+[vars]
+GOOGLE_CLIENT_ID = "e2e-client.apps.googleusercontent.com"
+JWT_KID = "dev-1"
+APP_URL = "http://localhost:4180"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "alerta"
+database_id = "e2e"
+migrations_dir = "migrations"

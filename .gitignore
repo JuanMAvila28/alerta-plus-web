@@ -12,3 +12,5 @@ playwright-report
 
 # Worker local secrets
 .dev.vars
+dist-e2e
+worker/.wrangler-e2e

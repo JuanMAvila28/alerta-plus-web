@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "icons": "node scripts/generate-icons.mjs",
-    "keys": "tsx worker/scripts/generate-keys.ts"
+    "keys": "tsx worker/scripts/generate-keys.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "dexie": "^4.4.6",
@@ -23,7 +24,9 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@cloudflare/workers-types": "^5.20261023.1",
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/vite": "^4.3.3",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",

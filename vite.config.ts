@@ -46,9 +46,11 @@ export default defineConfig({
     }),
   ],
   // Development: the Worker runs on its own port (`npm run dev:api`); in production it shares the domain.
-  server: { proxy: { '/api': 'http://localhost:8787' } },
-  preview: { proxy: { '/api': 'http://localhost:8787' } },
+  // API_URL lets the end-to-end tests point at their own Worker.
+  server: { proxy: { '/api': process.env.API_URL ?? 'http://localhost:8787' } },
+  preview: { proxy: { '/api': process.env.API_URL ?? 'http://localhost:8787' } },
   test: {
+    exclude: ['e2e/**', 'node_modules/**'],
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
   },

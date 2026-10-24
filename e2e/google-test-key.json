@@ -1,0 +1,24 @@
+{
+  "private": {
+    "kty": "EC",
+    "x": "rt_481lINwVKEU6agE1R1yQTcIJ6l_VIZTdE7T5sIyA",
+    "y": "FKjYyEEOtm4dCMisS3FMmi5gllpa9hvU6gnCt8W-rR4",
+    "crv": "P-256",
+    "d": "aTAe4WtQH8axGJ3HyLSBJPVrSgzy8NLWd8-_jPmxz-A",
+    "kid": "e2e-google",
+    "alg": "ES256"
+  },
+  "jwks": {
+    "keys": [
+      {
+        "kty": "EC",
+        "x": "rt_481lINwVKEU6agE1R1yQTcIJ6l_VIZTdE7T5sIyA",
+        "y": "FKjYyEEOtm4dCMisS3FMmi5gllpa9hvU6gnCt8W-rR4",
+        "crv": "P-256",
+        "kid": "e2e-google",
+        "alg": "ES256",
+        "use": "sig"
+      }
+    ]
+  }
+}
