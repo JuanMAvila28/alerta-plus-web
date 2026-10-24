@@ -31,7 +31,8 @@ export async function initLanguage(): Promise<void> {
   let saved: Language | undefined;
   if (isDbAvailable()) {
     try {
-      saved = (await db.localPreferences.get('language'))?.value;
+      const preference = await db.localPreferences.get('language');
+      if (preference?.key === 'language') saved = preference.value;
     } catch (error) {
       console.warn('Could not read the saved language.', error);
     }
