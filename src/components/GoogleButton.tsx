@@ -76,8 +76,8 @@ export function GoogleButton({ returnTo = null }: { returnTo?: string | null }) 
     return () => window.removeEventListener('online', retry);
   }, []);
 
-  if (!configured) return <p className="text-center text-base text-slate-600">{t(newTexts.login.notConfigured)}</p>;
-  if (failed) return <p className="text-center text-base text-slate-600">{t(newTexts.login.offline)}</p>;
+  if (!configured) return <p className="text-center text-caption text-ink-muted">{t(newTexts.login.notConfigured)}</p>;
+  if (failed) return <p className="text-center text-caption text-ink-muted">{t(newTexts.login.offline)}</p>;
 
   return <div ref={container} className="flex min-h-11 w-full justify-center" />;
 }

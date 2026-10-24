@@ -36,7 +36,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,json,webmanifest,txt}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,json,webmanifest,txt,woff2}'],
         navigateFallback: '/index.html',
         // The API never goes through the service worker (plan section 8).
         navigateFallbackDenylist: [/^\/api\//],

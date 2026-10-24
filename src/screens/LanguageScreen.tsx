@@ -1,9 +1,10 @@
+import { Check } from '@phosphor-icons/react';
 import { uiText } from '../content';
-import { Button, MenuButton } from '../components/MenuButton';
-import { Screen } from '../components/Screen';
+import { MenuButton } from '../components/MenuButton';
+import { Screen, ScreenHeader } from '../components/Screen';
 import { useAuth } from '../lib/auth';
 import { saveDocument, useDocument } from '../lib/data';
-import { useLanguage } from '../lib/i18n';
+import { HTML_LANG, useLanguage } from '../lib/i18n';
 import type { Language } from '../types';
 
 export default function LanguageScreen() {
@@ -17,23 +18,43 @@ export default function LanguageScreen() {
 
   return (
     <Screen>
-      <h1 className="text-center text-[28px] font-bold">{t(uiText.language.title)}</h1>
-      <p className="text-center text-lg">{t(uiText.language.question)}</p>
-      {options.map(({ value, label }) => (
-        <Button
-          key={value}
-          variant={language === value ? 'blue' : 'outline'}
-          aria-pressed={language === value}
-          onClick={() => {
-            void setLanguage(value);
-            // With an account the language also travels to the user's other devices.
-            if (session?.dataConsent && preferences) void saveDocument('preferences', { ...preferences, language: value });
-          }}
-        >
-          {language === value ? `✓ ${label}` : label}
-        </Button>
-      ))}
-      <MenuButton to="/">{t(uiText.language.back)}</MenuButton>
+      <ScreenHeader title={t(uiText.language.title)}>{t(uiText.language.question)}</ScreenHeader>
+
+      <div className="flex flex-col gap-3">
+        {options.map(({ value, label }) => {
+          const selected = language === value;
+          return (
+            <button
+              key={value}
+              type="button"
+              lang={HTML_LANG[value]}
+              aria-pressed={selected}
+              className={`flex min-h-[4.5rem] cursor-pointer items-center gap-4 rounded-[18px] border-2 px-5 text-left transition-colors duration-150 ${
+                selected ? 'border-alert-blue bg-alert-blue/8' : 'border-line hover:bg-surface active:bg-surface-pressed'
+              }`}
+              onClick={() => {
+                void setLanguage(value);
+                // With an account the language also travels to the user's other devices.
+                if (session?.dataConsent && preferences) void saveDocument('preferences', { ...preferences, language: value });
+              }}
+            >
+              <span className="flex-1 font-display text-[1.625rem] font-bold text-ink">{label}</span>
+              <span
+                aria-hidden="true"
+                className={`flex size-8 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-150 ${
+                  selected ? 'border-alert-blue bg-alert-blue text-white' : 'border-ink/30'
+                }`}
+              >
+                {selected && <Check size={18} weight="bold" />}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      <MenuButton to="/" className="mt-auto">
+        {t(uiText.language.back)}
+      </MenuButton>
     </Screen>
   );
 }

@@ -1,24 +1,134 @@
 @import 'tailwindcss';
+/* Self-hosted so the app keeps its type offline (the service worker precaches the .woff2 files). */
+@import '@fontsource-variable/atkinson-hyperlegible-next/wght.css';
+@import '@fontsource/barlow-condensed/latin-600.css';
+@import '@fontsource/barlow-condensed/latin-700.css';
+@import '@fontsource/barlow-condensed/latin-800.css';
 
+/*
+ * Visual language: emergency signage. Colors keep their ISO 7010 meaning
+ * (red = earthquake/danger, blue = help, green = safe condition) and are never decoration.
+ * Semantic colors change in dark mode below; the sign colors stay the same.
+ */
 @theme {
-  --color-alert-red: #d32f2f;
+  --color-alert-red: #c62828;
+  --color-alert-red-deep: #a51f1f;
   --color-alert-blue: #1565c0;
+  --color-alert-blue-deep: #0f4f9a;
   --color-splash: #102a43;
   --color-splash-text: #d7e6f2;
-  --color-premium-card: #f1f6fa;
+  --color-splash-trace: #42d6c5;
   --color-illustration-bg: #f1f7fb;
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Color Emoji', sans-serif;
+
+  --color-page: #ffffff;
+  --color-surface: #f2f5f9;
+  --color-surface-pressed: #e6ecf2;
+  --color-raised: #ffffff;
+  --color-line: #dbe3eb;
+  --color-ink: #102a43;
+  --color-ink-muted: #4a6075;
+  --color-brand: #23466b;
+  --color-safe: #12754a;
+  --color-warn: #8a4b00;
+  --color-signal: #b4570a;
+  --color-danger: #b3261e;
+  --color-link: #1565c0;
+  --color-focus: #1565c0;
+
+  --font-sans:
+    'Atkinson Hyperlegible Next Variable', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Color Emoji', sans-serif;
+  --font-display: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+
+  /* Major-third scale from a 17 px body: nothing a stressed reader has to squint at. */
+  --text-caption: 0.9375rem;
+  --text-caption--line-height: 1.35;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.55;
+  --text-label: 1rem;
+  --text-label--line-height: 1.2;
+  --text-title: 2.25rem;
+  --text-title--line-height: 1;
+  --text-wordmark: 2.75rem;
+  --text-wordmark--line-height: 0.9;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @layer base {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --color-page: #0b1622;
+      --color-surface: #132334;
+      --color-surface-pressed: #1b2f44;
+      --color-raised: #15283b;
+      --color-line: #243a50;
+      --color-ink: #e8eef4;
+      --color-ink-muted: #9fb2c4;
+      --color-brand: #8db4da;
+      --color-safe: #4cc38a;
+      --color-warn: #f2b35b;
+      --color-signal: #f5a04e;
+      --color-danger: #ff8a80;
+      --color-link: #8ab8ff;
+      --color-focus: #8ab8ff;
+    }
+  }
+
   html {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply bg-white text-slate-900 antialiased;
+    @apply bg-page text-body text-ink antialiased;
+    font-optical-sizing: auto;
+  }
+  a,
+  button,
+  label {
+    touch-action: manipulation;
   }
   :focus-visible {
-    @apply outline-3 outline-offset-2 outline-alert-blue;
+    @apply outline-3 outline-offset-3 outline-focus;
+  }
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+}
+
+/* Splash seismograph: the one piece of motion that is not a response to a tap. */
+@keyframes trace {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    translate: 0 4px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    translate: 0 100%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

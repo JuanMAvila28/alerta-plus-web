@@ -1,7 +1,8 @@
+import { Check, ShieldCheck } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router';
 import { Button } from '../components/MenuButton';
-import { Screen } from '../components/Screen';
+import { Screen, ScreenHeader } from '../components/Screen';
 import { apiFetch } from '../lib/api';
 import { setDataConsent, signOut, useAuth } from '../lib/auth';
 import { POLICY_VERSION } from '../lib/config';
@@ -46,35 +47,52 @@ export default function Welcome() {
   const w = newTexts.welcome;
   return (
     <Screen>
-      <h1 className="text-center text-[28px] font-bold">{t(w.title)}</h1>
-      <p className="text-lg">{t(w.whatWeSave)}</p>
-      <p className="text-lg">{t(w.noLocation)}</p>
-      <a href={PRIVACY_URL} target="_blank" rel="noopener noreferrer" className="py-2 text-lg text-alert-blue underline">
+      <ScreenHeader title={t(w.title)}>{t(w.whatWeSave)}</ScreenHeader>
+
+      <p className="flex items-start gap-3 rounded-[16px] bg-safe/10 p-4 font-semibold text-ink">
+        <ShieldCheck size={24} weight="bold" aria-hidden="true" className="shrink-0 text-safe" />
+        {t(w.noLocation)}
+      </p>
+
+      <a
+        href={PRIVACY_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="self-start py-1 font-semibold text-link underline underline-offset-4"
+      >
         {t(w.readPolicy)}
       </a>
 
-      <label className="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-slate-300 p-3 text-base">
+      <label className="mt-2 flex cursor-pointer items-start gap-4 rounded-[18px] border-2 border-line p-4 transition-colors duration-150 has-checked:border-alert-blue has-checked:bg-alert-blue/6">
         <input
           type="checkbox"
-          className="mt-1 size-6 shrink-0 accent-alert-blue"
+          className="peer sr-only"
           checked={accepted}
           onChange={(event) => setAccepted(event.target.checked)}
         />
-        <span>{t(w.consent)}</span>
+        <span
+          aria-hidden="true"
+          className="flex size-7 shrink-0 items-center justify-center rounded-[8px] border-2 border-ink/40 bg-page text-white transition-colors duration-150 peer-checked:border-alert-blue peer-checked:bg-alert-blue peer-focus-visible:outline-3 peer-focus-visible:outline-offset-3 peer-focus-visible:outline-focus [&>svg]:scale-50 [&>svg]:opacity-0 [&>svg]:transition-[opacity,scale] [&>svg]:duration-150 peer-checked:[&>svg]:scale-100 peer-checked:[&>svg]:opacity-100"
+        >
+          <Check size={18} weight="bold" />
+        </span>
+        <span className="text-ink">{t(w.consent)}</span>
       </label>
 
       {error && (
-        <p role="alert" className="text-center text-base text-alert-red">
+        <p role="alert" className="text-danger">
           {t(w.error)}
         </p>
       )}
 
-      <Button variant="blue" disabled={!accepted || saving} onClick={() => void accept()}>
-        {t(w.accept)}
-      </Button>
-      <Button disabled={saving} onClick={() => void notNow()}>
-        {t(w.notNow)}
-      </Button>
+      <div className="mt-auto flex flex-col gap-3 pt-2">
+        <Button variant="blue" disabled={!accepted || saving} onClick={() => void accept()}>
+          {t(w.accept)}
+        </Button>
+        <Button disabled={saving} onClick={() => void notNow()}>
+          {t(w.notNow)}
+        </Button>
+      </div>
     </Screen>
   );
 }

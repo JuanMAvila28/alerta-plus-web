@@ -1,3 +1,4 @@
+import { CircleNotch } from '@phosphor-icons/react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { Screen } from '../components/Screen';
@@ -36,9 +37,15 @@ export default function LoginDone() {
 
   return (
     <Screen>
-      <p role="status" className="mt-16 text-center text-xl">
-        {t(newTexts.login.entering)}
-      </p>
+      <div role="status" className="my-auto flex flex-col items-center gap-4 text-ink">
+        <CircleNotch
+          size={40}
+          weight="bold"
+          aria-hidden="true"
+          className="text-alert-blue motion-safe:animate-[spin_0.9s_linear_infinite]"
+        />
+        <p className="font-display text-[1.75rem] font-bold">{t(newTexts.login.entering)}</p>
+      </div>
     </Screen>
   );
 }

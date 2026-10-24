@@ -1,8 +1,9 @@
+import { WarningCircle } from '@phosphor-icons/react';
 import { useSearchParams } from 'react-router';
-import { uiText } from '../content';
+import { EmergencySigns } from '../components/EmergencySigns';
 import { GoogleButton } from '../components/GoogleButton';
 import { MenuButton } from '../components/MenuButton';
-import { Screen } from '../components/Screen';
+import { Screen, ScreenHeader } from '../components/Screen';
 import { useLanguage } from '../lib/i18n';
 import { newTexts } from '../newTexts';
 
@@ -14,26 +15,27 @@ export default function Login() {
 
   return (
     <Screen>
-      <h1 className="text-center text-[28px] font-bold">{t(newTexts.login.title)}</h1>
-      <p className="text-center text-lg">{t(newTexts.login.description)}</p>
+      <ScreenHeader title={t(newTexts.login.title)}>{t(newTexts.login.description)}</ScreenHeader>
 
       {error && (
-        <p role="alert" className="rounded-xl bg-red-50 p-3 text-center text-base text-alert-red">
+        <p role="alert" className="flex items-start gap-3 rounded-[16px] bg-danger/10 p-4 text-danger">
+          <WarningCircle size={22} weight="bold" aria-hidden="true" className="mt-0.5 shrink-0" />
           {t(error === 'session' ? newTexts.login.errorSession : newTexts.login.errorGoogle)}
         </p>
       )}
 
-      <GoogleButton returnTo={params.get('volver')} />
+      <div className="rounded-[20px] bg-surface px-4 py-5">
+        <GoogleButton returnTo={params.get('volver')} />
+      </div>
 
-      <p className="mt-4 text-center text-base font-semibold">{t(newTexts.login.emergencyHint)}</p>
-      <MenuButton to="/sismo" variant="red">
-        {t(uiText.menu.earthquake)}
-      </MenuButton>
-      <MenuButton to="/emergencia" variant="blue">
-        {t(uiText.menu.emergency)}
-      </MenuButton>
+      <section className="mt-4 flex flex-col gap-3 border-t-2 border-line pt-5">
+        <p className="font-semibold text-ink">{t(newTexts.login.emergencyHint)}</p>
+        <EmergencySigns compact />
+      </section>
 
-      <MenuButton to="/">{t(newTexts.login.back)}</MenuButton>
+      <MenuButton to="/" className="mt-auto">
+        {t(newTexts.login.back)}
+      </MenuButton>
     </Screen>
   );
 }

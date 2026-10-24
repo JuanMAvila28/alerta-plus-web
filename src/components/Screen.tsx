@@ -8,3 +8,13 @@ export function Screen({ children }: { children: ReactNode }) {
     </main>
   );
 }
+
+/** Screen title with an optional intro paragraph. Left-aligned so long intros read as text, not a poster. */
+export function ScreenHeader({ title, children }: { title: string; children?: ReactNode }) {
+  return (
+    <header className="flex flex-col gap-3 pt-3 pb-1">
+      <h1 className="font-display text-title font-bold text-ink">{title}</h1>
+      {children && <p className="text-body text-ink-muted">{children}</p>}
+    </header>
+  );
+}
