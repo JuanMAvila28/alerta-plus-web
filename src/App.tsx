@@ -14,6 +14,9 @@ import HomeScreen from './screens/HomeScreen';
 import ContactsScreen from './screens/ContactsScreen';
 import PersonScreen from './screens/PersonScreen';
 import { CheckList } from './components/CheckList';
+import EarthquakeScreen from './screens/EarthquakeScreen';
+import EmergencyMenu from './screens/EmergencyMenu';
+import ProtocolScreen from './screens/ProtocolScreen';
 import UnderConstruction from './screens/UnderConstruction';
 
 // Screens that need an account (plan section 5).
@@ -44,6 +47,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<MainMenu />} />
           <Route path="/idioma" element={<LanguageScreen />} />
+          {/* Emergencies: no account, no connection (plan rule 7.1). */}
+          <Route path="/sismo" element={<EarthquakeScreen />} />
+          <Route path="/emergencia" element={<EmergencyMenu />} />
+          <Route path="/emergencia/:id" element={<ProtocolScreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/login/ok" element={<LoginDone />} />
           <Route path="/bienvenida" element={<Welcome />} />

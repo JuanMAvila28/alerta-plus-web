@@ -131,6 +131,15 @@ export const newTexts = {
   contacts: {
     limitReached: { es: 'Llegaste al máximo de 50 personas.', en: 'You reached the maximum of 50 people.' },
   },
+  // Phase 4: step reader (plan section 6.6 and fix 9.6).
+  reader: {
+    start: { es: '▶ COMENZAR', en: '▶ START' },
+    startHint: {
+      es: 'Toca COMENZAR para escuchar las instrucciones en voz alta.',
+      en: 'Tap START to hear the instructions aloud.',
+    },
+    next: { es: 'SIGUIENTE PASO ▶', en: 'NEXT STEP ▶' },
+  },
   // Temporary while the later phases are built.
   underConstruction: {
     title: { es: 'Pantalla en construcción', en: 'Screen under construction' },
