@@ -5,7 +5,7 @@ import type { User } from '../types';
 export function Avatar({ user, size = 40 }: { user: User; size?: number }) {
   const [broken, setBroken] = useState(false);
   const initial = (user.name ?? user.email).trim().charAt(0).toUpperCase();
-  const style = { width: size, height: size };
+  const style = { width: size, height: size, fontSize: Math.round(size * 0.42) };
 
   if (user.photo && !broken) {
     return (
@@ -23,7 +23,7 @@ export function Avatar({ user, size = 40 }: { user: User; size?: number }) {
     <span
       aria-hidden="true"
       style={style}
-      className="flex shrink-0 items-center justify-center rounded-full bg-alert-blue text-lg font-bold text-white"
+      className="flex shrink-0 items-center justify-center rounded-full bg-alert-blue font-display font-bold text-white"
     >
       {initial}
     </span>

@@ -1,8 +1,10 @@
+import { DownloadSimple, SignOut, Trash } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Avatar } from '../components/Avatar';
+import { ConfirmSheet } from '../components/ConfirmSheet';
 import { Button, MenuButton } from '../components/MenuButton';
-import { Screen } from '../components/Screen';
+import { Screen, ScreenHeader } from '../components/Screen';
 import { SyncStatus } from '../components/SyncStatus';
 import { showToast } from '../components/Toast';
 import { apiFetch } from '../lib/api';
@@ -12,6 +14,8 @@ import { useLanguage } from '../lib/i18n';
 import { newTexts } from '../newTexts';
 
 type Confirming = null | 'signOut' | 'delete1' | 'delete2';
+
+const ICON = { size: 22, weight: 'bold', 'aria-hidden': true } as const;
 
 /** /cuenta (plan section 7.8). */
 export default function Account() {
@@ -45,57 +49,79 @@ export default function Account() {
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     });
 
-  const doSignOut = () =>
-    run(async () => {
+  // The sheet closes before the action runs: signing out or deleting unmounts this screen.
+  const doSignOut = () => {
+    setConfirming(null);
+    return run(async () => {
       await signOut();
       navigate('/', { replace: true });
     });
+  };
 
-  const doDelete = () =>
-    run(async () => {
+  const doDelete = () => {
+    setConfirming(null);
+    return run(async () => {
       await apiFetch('/api/account', { method: 'DELETE' });
       await clearLocalAccount();
       showToast(t(a.deleted));
       navigate('/', { replace: true });
     });
+  };
+
+  const deleting = confirming === 'delete1' || confirming === 'delete2';
 
   return (
     <Screen>
-      <h1 className="text-center text-[28px] font-bold">{t(a.title)}</h1>
+      <ScreenHeader title={t(a.title)} />
 
-      <section className="flex items-center gap-4 rounded-xl bg-premium-card p-4">
-        <Avatar user={session.user} size={56} />
-        <div className="min-w-0">
-          {session.user.name && <p className="truncate text-lg font-bold">{session.user.name}</p>}
-          <p className="truncate text-base text-slate-700">{session.user.email}</p>
+      <section className="flex items-center gap-4 rounded-[20px] bg-surface p-5">
+        <Avatar user={session.user} size={64} />
+        <div className="flex min-w-0 flex-col gap-1">
+          {session.user.name && (
+            <p className="font-display text-[1.625rem] leading-tight font-bold [overflow-wrap:anywhere] text-ink">
+              {session.user.name}
+            </p>
+          )}
+          <p className="text-caption [overflow-wrap:anywhere] text-ink-muted">{session.user.email}</p>
           <SyncStatus className="mt-1" />
         </div>
       </section>
 
-      <Button disabled={busy} onClick={() => void download()}>
-        {t(a.download)}
-      </Button>
-
-      {confirming === 'signOut' ? (
-        <section className="flex flex-col gap-3 rounded-xl border-2 border-amber-600 p-4">
-          <p className="text-base">{t(a.signOutPending)}</p>
-          <Button variant="red" disabled={busy} onClick={() => void doSignOut()}>
-            {t(a.signOutConfirm)}
-          </Button>
-          <Button onClick={() => setConfirming(null)}>{t(a.cancel)}</Button>
-        </section>
-      ) : (
-        <Button
-          disabled={busy}
-          onClick={() => (pending > 0 ? setConfirming('signOut') : void doSignOut())}
-        >
+      <div className="flex flex-col gap-3">
+        <Button disabled={busy} onClick={() => void download()}>
+          <DownloadSimple {...ICON} />
+          {t(a.download)}
+        </Button>
+        <Button disabled={busy} onClick={() => (pending > 0 ? setConfirming('signOut') : void doSignOut())}>
+          <SignOut {...ICON} />
           {t(a.signOut)}
         </Button>
-      )}
+      </div>
 
-      {confirming === 'delete1' || confirming === 'delete2' ? (
-        <section className="flex flex-col gap-3 rounded-xl border-2 border-alert-red p-4">
-          <p className="text-base">{t(confirming === 'delete1' ? a.deleteWarning : a.deleteFinal)}</p>
+      {/* Kept apart from the everyday actions (destructive action, two confirmations). */}
+      <button
+        type="button"
+        disabled={busy}
+        className="mt-3 flex min-h-12 cursor-pointer items-center gap-2 self-center rounded-[12px] px-4 font-bold tracking-[0.03em] text-danger transition-colors hover:bg-danger/8 disabled:opacity-45"
+        onClick={() => setConfirming('delete1')}
+      >
+        <Trash size={20} weight="bold" aria-hidden="true" />
+        {t(a.delete)}
+      </button>
+
+      <MenuButton to="/" className="mt-auto">
+        {t(a.back)}
+      </MenuButton>
+
+      <ConfirmSheet
+        open={confirming !== null}
+        busy={busy}
+        onCancel={() => setConfirming(null)}
+        title={t(deleting ? a.delete : a.signOut)}
+        message={t(confirming === 'delete1' ? a.deleteWarning : confirming === 'delete2' ? a.deleteFinal : a.signOutPending)}
+        cancelLabel={t(a.cancel)}
+      >
+        {deleting ? (
           <Button
             variant="red"
             disabled={busy}
@@ -103,20 +129,12 @@ export default function Account() {
           >
             {t(confirming === 'delete1' ? a.deleteContinue : a.deleteConfirm)}
           </Button>
-          <Button onClick={() => setConfirming(null)}>{t(a.cancel)}</Button>
-        </section>
-      ) : (
-        <button
-          type="button"
-          disabled={busy}
-          className="min-h-12 self-center px-4 text-base font-bold text-alert-red underline disabled:opacity-50"
-          onClick={() => setConfirming('delete1')}
-        >
-          {t(a.delete)}
-        </button>
-      )}
-
-      <MenuButton to="/">{t(a.back)}</MenuButton>
+        ) : (
+          <Button variant="red" disabled={busy} onClick={() => void doSignOut()}>
+            {t(a.signOutConfirm)}
+          </Button>
+        )}
+      </ConfirmSheet>
     </Screen>
   );
 }

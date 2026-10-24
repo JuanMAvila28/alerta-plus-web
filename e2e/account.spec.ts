@@ -30,7 +30,7 @@ test('login with Google: data authorization, then back to the requested screen',
   await expect(page).toHaveURL(/\/kit$/);
   await page.goto('/');
   await expect(page.getByRole('link', { name: /Mi cuenta: Ana Prueba/ })).toBeVisible();
-  await expect(page.getByText('✓ Sincronizado')).toBeVisible();
+  await expect(page.getByText('Sincronizado')).toBeVisible();
 });
 
 test('"Ahora no" on the authorization signs out and leaves emergencies available', async ({ browser }) => {

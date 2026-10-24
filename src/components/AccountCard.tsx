@@ -1,3 +1,4 @@
+import { CaretRight, CloudArrowUp } from '@phosphor-icons/react';
 import { Link } from 'react-router';
 import { useAuth } from '../lib/auth';
 import { useLanguage } from '../lib/i18n';
@@ -13,8 +14,13 @@ export function AccountCard() {
 
   if (!session) {
     return (
-      <section className="flex flex-col gap-2 rounded-xl bg-premium-card p-3">
-        <p className="text-center text-base font-semibold">{t(newTexts.accountCard.invite)}</p>
+      <section className="flex flex-col gap-3 rounded-[20px] border-2 border-line p-4">
+        <p className="flex items-center gap-3 font-semibold text-ink">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-brand/12 text-brand">
+            <CloudArrowUp size={22} weight="bold" aria-hidden="true" />
+          </span>
+          {t(newTexts.accountCard.invite)}
+        </p>
         <GoogleButton />
       </section>
     );
@@ -24,16 +30,14 @@ export function AccountCard() {
     <Link
       to="/cuenta"
       aria-label={`${t(newTexts.accountCard.myAccount)}: ${session.user.name ?? session.user.email}`}
-      className="flex min-h-12 items-center gap-3 rounded-xl bg-premium-card px-3 py-2"
+      className="flex min-h-16 items-center gap-3.5 rounded-[20px] bg-surface py-3 pr-3 pl-4 transition-colors duration-150 hover:bg-surface-pressed active:bg-surface-pressed"
     >
-      <Avatar user={session.user} size={36} />
-      <span className="flex min-w-0 flex-1 flex-col">
-        <span className="truncate font-semibold">{session.user.name ?? session.user.email}</span>
+      <Avatar user={session.user} size={44} />
+      <span className="flex min-w-0 flex-1 flex-col gap-0.5">
+        <span className="truncate font-bold text-ink">{session.user.name ?? session.user.email}</span>
         <SyncStatus />
       </span>
-      <span aria-hidden="true" className="text-xl text-slate-500">
-        ›
-      </span>
+      <CaretRight size={20} weight="bold" aria-hidden="true" className="shrink-0 text-ink-muted" />
     </Link>
   );
 }

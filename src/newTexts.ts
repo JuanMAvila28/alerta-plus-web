@@ -104,7 +104,7 @@ export const newTexts = {
     back: { es: 'VOLVER', en: 'BACK' },
   },
   sync: {
-    synced: { es: '✓ Sincronizado', en: '✓ Synced' },
+    synced: { es: 'Sincronizado', en: 'Synced' },
     syncing: { es: 'Sincronizando…', en: 'Syncing…' },
     pending: { es: 'Cambios pendientes', en: 'Changes pending' },
     offline: {
