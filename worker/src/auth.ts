@@ -1,5 +1,5 @@
 // Google login, refresh-token rotation and logout (plan sections 7.3 and 7.4).
-import { createRemoteJWKSet, jwtVerify } from 'jose';
+import { createLocalJWKSet, createRemoteJWKSet, jwtVerify, type JSONWebKeySet, type JWTVerifyGetKey } from 'jose';
 import type { Env } from './env';
 import { getCookie, HttpError, json, redirect } from './http';
 import { signAccessToken, signLicense, type LicenseClaims } from './tokens';
@@ -8,6 +8,12 @@ export const REFRESH_COOKIE = '__Host-alerta_refresh';
 const REFRESH_TTL_MS = 90 * 24 * 60 * 60 * 1000;
 const GOOGLE_ISSUERS = ['accounts.google.com', 'https://accounts.google.com'];
 const googleKeys = createRemoteJWKSet(new URL('https://www.googleapis.com/oauth2/v3/certs'));
+
+function googleVerificationKeys(env: Env): JWTVerifyGetKey {
+  if (env.GOOGLE_KEYS) return env.GOOGLE_KEYS;
+  if (env.GOOGLE_TEST_JWKS) return createLocalJWKSet(JSON.parse(env.GOOGLE_TEST_JWKS) as JSONWebKeySet);
+  return googleKeys;
+}
 
 interface UserRow {
   id: string;
@@ -80,7 +86,7 @@ export async function googleLogin(request: Request, env: Env): Promise<Response>
 
   let claims;
   try {
-    ({ payload: claims } = await jwtVerify(credential, env.GOOGLE_KEYS ?? googleKeys, {
+    ({ payload: claims } = await jwtVerify(credential, googleVerificationKeys(env), {
       issuer: GOOGLE_ISSUERS,
       audience: env.GOOGLE_CLIENT_ID,
     }));

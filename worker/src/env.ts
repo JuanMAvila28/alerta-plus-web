@@ -9,6 +9,8 @@ export interface Env {
   /** ES256 private JWK as JSON (secret). */
   JWT_PRIVATE_KEY: string;
   AUTH_LIMITER?: RateLimit;
-  /** Tests only: replaces Google's public keys. */
+  /** Unit tests only: replaces Google's public keys. */
   GOOGLE_KEYS?: JWTVerifyGetKey;
+  /** End-to-end tests only (JWKS as JSON). Never set it in production: it would trust other keys than Google's. */
+  GOOGLE_TEST_JWKS?: string;
 }

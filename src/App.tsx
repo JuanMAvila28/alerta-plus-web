@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Route, Routes, useLocation } from 'react-router';
 import { RequireAccount } from './components/RequireAccount';
 import { Toasts } from './components/Toast';
@@ -10,10 +10,37 @@ import Login from './screens/Login';
 import LoginDone from './screens/LoginDone';
 import Welcome from './screens/Welcome';
 import Account from './screens/Account';
+import HomeScreen from './screens/HomeScreen';
+import ContactsScreen from './screens/ContactsScreen';
+import PersonScreen from './screens/PersonScreen';
+import { CheckList } from './components/CheckList';
+import EarthquakeScreen from './screens/EarthquakeScreen';
+import EmergencyMenu from './screens/EmergencyMenu';
+import ProtocolScreen from './screens/ProtocolScreen';
+import PremiumScreen from './screens/PremiumScreen';
+import LibraryScreen from './screens/LibraryScreen';
+import GuideScreen from './screens/GuideScreen';
+import PracticeScreen from './screens/PracticeScreen';
+import { RequirePremium } from './components/RequirePremium';
 import UnderConstruction from './screens/UnderConstruction';
 
-// Routes from later phases that need an account (plan section 5).
-const ACCOUNT_ROUTES = ['/vivienda', '/kit', '/botiquin', '/checklist', '/nucleo/*', '/premium/*'];
+// Screens that need an account (plan section 5).
+const ACCOUNT_ROUTES: [string, ReactNode][] = [
+  ['/cuenta', <Account />],
+  ['/vivienda', <HomeScreen />],
+  ['/kit', <CheckList type="kit" />],
+  ['/botiquin', <CheckList type="firstAidKit" />],
+  ['/checklist', <CheckList type="checklist" />],
+  ['/nucleo', <ContactsScreen />],
+  ['/nucleo/persona', <PersonScreen />],
+  ['/nucleo/persona/:index', <PersonScreen />],
+  ['/premium', <PremiumScreen />],
+  ['/premium/guias', <RequirePremium><LibraryScreen /></RequirePremium>],
+  ['/premium/guias/:index', <RequirePremium><GuideScreen /></RequirePremium>],
+  ['/premium/practica', <RequirePremium><PracticeScreen /></RequirePremium>],
+  // Phase 5 (SMS alerts) is postponed.
+  ['/nucleo/avisar/*', <UnderConstruction />],
+];
 
 export default function App() {
   const { pathname } = useLocation();
@@ -28,27 +55,15 @@ export default function App() {
         <Routes>
           <Route path="/" element={<MainMenu />} />
           <Route path="/idioma" element={<LanguageScreen />} />
+          {/* Emergencies: no account, no connection (plan rule 7.1). */}
+          <Route path="/sismo" element={<EarthquakeScreen />} />
+          <Route path="/emergencia" element={<EmergencyMenu />} />
+          <Route path="/emergencia/:id" element={<ProtocolScreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/login/ok" element={<LoginDone />} />
           <Route path="/bienvenida" element={<Welcome />} />
-          <Route
-            path="/cuenta"
-            element={
-              <RequireAccount>
-                <Account />
-              </RequireAccount>
-            }
-          />
-          {ACCOUNT_ROUTES.map((path) => (
-            <Route
-              key={path}
-              path={path}
-              element={
-                <RequireAccount>
-                  <UnderConstruction />
-                </RequireAccount>
-              }
-            />
+          {ACCOUNT_ROUTES.map(([path, element]) => (
+            <Route key={path} path={path} element={<RequireAccount>{element}</RequireAccount>} />
           ))}
           <Route path="*" element={<UnderConstruction />} />
         </Routes>

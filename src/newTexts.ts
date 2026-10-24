@@ -113,6 +113,51 @@ export const newTexts = {
     },
     expired: { es: 'Inicia sesión de nuevo para sincronizar', en: 'Sign in again to sync' },
   },
+  // Phase 3: family group (plan sections 6.8, 7.8 and 9.3–9.5).
+  person: {
+    nameRequired: { es: 'Escribe el nombre de la persona.', en: "Enter the person's name." },
+    phoneRequired: { es: 'Escribe el número telefónico.', en: 'Enter the phone number.' },
+    phoneInvalid: {
+      es: 'El número solo puede tener dígitos, espacios, guiones y +.',
+      en: 'The number can only contain digits, spaces, hyphens and +.',
+    },
+    thirdPartyNotice: {
+      es: 'Asegúrate de que las personas que agregas estén de acuerdo en recibir tus avisos.',
+      en: 'Make sure the people you add agree to receive your alerts.',
+    },
+    // The Android screen relied on the system back button, which an installed iOS PWA does not have.
+    back: { es: '↩️ VOLVER', en: '↩️ BACK' },
+  },
+  contacts: {
+    limitReached: { es: 'Llegaste al máximo de 50 personas.', en: 'You reached the maximum of 50 people.' },
+  },
+  // Phase 4: step reader (plan section 6.6 and fix 9.6).
+  reader: {
+    start: { es: '▶ COMENZAR', en: '▶ START' },
+    startHint: {
+      es: 'Toca COMENZAR para escuchar las instrucciones en voz alta.',
+      en: 'Tap START to hear the instructions aloud.',
+    },
+    next: { es: 'SIGUIENTE PASO ▶', en: 'NEXT STEP ▶' },
+  },
+  // Phase 6: Premium without payments (D2 and D3 pending).
+  premium: {
+    comingSoon: {
+      es: 'La compra de Premium estará disponible próximamente.',
+      en: 'Buying Premium will be available soon.',
+    },
+    restored: { es: 'Premium está activo en tu cuenta.', en: 'Premium is active on your account.' },
+    notFound: {
+      es: 'No encontramos una compra de Premium en tu cuenta.',
+      en: 'We could not find a Premium purchase on your account.',
+    },
+    needsConnection: {
+      es: 'Necesitas conexión a internet para restaurar la compra.',
+      en: 'You need an internet connection to restore your purchase.',
+    },
+    correct: { es: '✓ Correcto', en: '✓ Correct' },
+    incorrect: { es: '✗ Incorrecto', en: '✗ Incorrect' },
+  },
   // Temporary while the later phases are built.
   underConstruction: {
     title: { es: 'Pantalla en construcción', en: 'Screen under construction' },

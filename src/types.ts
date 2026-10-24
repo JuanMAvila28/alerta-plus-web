@@ -248,7 +248,7 @@ export interface Session {
   dataConsent: boolean;
 }
 
-export interface LocalPreference {
-  key: 'language';
-  value: Language;
-}
+export type LocalPreference =
+  | { key: 'language'; value: Language }
+  /** The note about third-party consent was shown (plan section 7.8). */
+  | { key: 'thirdPartyNoticeSeen'; value: boolean };

@@ -58,7 +58,7 @@ export default function Welcome() {
         href={PRIVACY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="self-start py-1 font-semibold text-link underline underline-offset-4"
+        className="flex min-h-12 items-center self-start font-semibold text-link underline underline-offset-4"
       >
         {t(w.readPolicy)}
       </a>

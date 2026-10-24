@@ -3,51 +3,51 @@
   "intro": {
     "title": {
       "es": "PREMIUM INCLUYE",
-      "en": null
+      "en": "PREMIUM INCLUDES"
     },
     "benefits": [
       {
         "icon": "🧭",
         "title": {
           "es": "Guías ilustradas paso a paso",
-          "en": null
+          "en": "Step-by-step illustrated guides"
         },
         "detail": {
           "es": "Un diagrama propio acompaña cada indicación y funciona sin conexión.",
-          "en": null
+          "en": "Each instruction comes with its own diagram and works offline."
         }
       },
       {
         "icon": "💡",
         "title": {
           "es": "Explicaciones ampliadas",
-          "en": null
+          "en": "Extended explanations"
         },
         "detail": {
           "es": "Entiende por qué importa cada paso y qué cambios debes comunicar al pedir ayuda.",
-          "en": null
+          "en": "Understand why each step matters and what changes to report when you call for help."
         }
       },
       {
         "icon": "🧠",
         "title": {
           "es": "Modo de práctica",
-          "en": null
+          "en": "Practice mode"
         },
         "detail": {
           "es": "Preguntas cortas para que la familia recuerde las decisiones seguras antes de una emergencia.",
-          "en": null
+          "en": "Short questions to help your family remember the safe choices before an emergency."
         }
       },
       {
         "icon": "🏠",
         "title": {
           "es": "Preparación para el hogar",
-          "en": null
+          "en": "Home preparedness"
         },
         "detail": {
           "es": "Integra las guías con el kit, botiquín y plan familiar que ya tienes en ALERTA+.",
-          "en": null
+          "en": "Combine the guides with the kit, first aid kit and family plan you already have in ALERTA+."
         }
       }
     ]
@@ -55,82 +55,82 @@
   "library": {
     "title": {
       "es": "⭐ TU BIBLIOTECA PREMIUM",
-      "en": null
+      "en": "⭐ YOUR PREMIUM LIBRARY"
     },
     "subtitle": {
       "es": "Guías ilustradas",
-      "en": null
+      "en": "Illustrated guides"
     },
     "description": {
       "es": "Elige una situación. Los pasos básicos siguen disponibles en la versión gratuita.",
-      "en": null
+      "en": "Choose a situation. The basic steps are still available in the free version."
     },
     "practiceButton": {
       "es": "🧠 PRACTICAR EN FAMILIA",
-      "en": null
+      "en": "🧠 PRACTICE AS A FAMILY"
     },
     "previousButton": {
       "es": "ANTERIOR",
-      "en": null
+      "en": "PREVIOUS"
     },
     "nextButton": {
       "es": "SIGUIENTE",
-      "en": null
+      "en": "NEXT"
     },
     "backToGuidesButton": {
       "es": "VOLVER A LAS GUÍAS",
-      "en": null
+      "en": "BACK TO THE GUIDES"
     },
     "guides": [
       {
         "title": {
           "es": "Heridas y sangrado",
-          "en": null
+          "en": "Wounds and bleeding"
         },
         "steps": [
           {
             "action": {
               "es": "Primero verifica que el lugar sea seguro.",
-              "en": null
+              "en": "First check that the place is safe."
             },
             "explanation": {
               "es": "Evita que el peligro alcance también a quien ayuda. Si la escena no es segura, aléjate y solicita apoyo.",
-              "en": null
+              "en": "Keep the danger from reaching the person helping too. If the scene is not safe, move away and ask for support."
             },
             "illustration": "safety",
             "label": {
               "es": "PROTÉGETE ANTES DE ACERCARTE",
-              "en": null
+              "en": "PROTECT YOURSELF BEFORE APPROACHING"
             }
           },
           {
             "action": {
               "es": "Si hay sangrado, usa una gasa o tela limpia y presiona directamente.",
-              "en": null
+              "en": "If there is bleeding, use gauze or a clean cloth and press directly."
             },
             "explanation": {
               "es": "La presión directa ayuda a controlar el sangrado externo. Mantén la atención en la persona y pide ayuda si el sangrado es intenso o no se controla.",
-              "en": null
+              "en": "Direct pressure helps control external bleeding. Keep your attention on the person and call for help if the bleeding is heavy or does not stop."
             },
             "illustration": "wound",
             "label": {
               "es": "PRESIÓN DIRECTA CON MATERIAL LIMPIO",
-              "en": null
+              "en": "DIRECT PRESSURE WITH CLEAN MATERIAL"
             }
           },
           {
             "action": {
               "es": "Busca atención si la herida es grave o la persona empeora.",
-              "en": null
+              "en": "Seek care if the wound is serious or the person gets worse."
             },
             "explanation": {
               "es": "Al pedir ayuda, indica dónde estás, qué ocurrió y si la persona responde y respira normalmente.",
-              "en": null
+              "en": "When calling for help, say where you are, what happened and whether the person responds and breathes normally."
             },
             "illustration": "call",
             "label": {
               "es": "EXPLICA LA SITUACIÓN Y LA UBICACIÓN",
-              "en": null
+              "en": "EXPLAIN THE SITUATION AND THE LOCATION"
             }
           }
         ]
@@ -138,52 +138,52 @@
       {
         "title": {
           "es": "Fracturas",
-          "en": null
+          "en": "Fractures"
         },
         "steps": [
           {
             "action": {
               "es": "Comprueba que la escena sea segura.",
-              "en": null
+              "en": "Check that the scene is safe."
             },
             "explanation": {
               "es": "No te acerques si persiste un peligro activo. Pide a otra persona que llame mientras tú observas desde un lugar seguro.",
-              "en": null
+              "en": "Do not approach if an active danger remains. Ask someone else to call while you watch from a safe place."
             },
             "illustration": "safety",
             "label": {
               "es": "ESCENA SEGURA PRIMERO",
-              "en": null
+              "en": "SAFE SCENE FIRST"
             }
           },
           {
             "action": {
               "es": "Evita mover o enderezar la zona lesionada.",
-              "en": null
+              "en": "Avoid moving or straightening the injured area."
             },
             "explanation": {
               "es": "Mover una lesión puede aumentar el dolor o empeorarla. No intentes recolocar huesos ni fuerces una postura.",
-              "en": null
+              "en": "Moving an injury can increase the pain or make it worse. Do not try to reset bones or force a position."
             },
             "illustration": "immobilize",
             "label": {
               "es": "NO FUERCES MOVIMIENTOS",
-              "en": null
+              "en": "DO NOT FORCE MOVEMENT"
             }
           },
           {
             "action": {
               "es": "Solicita valoración médica, especialmente si parece grave.",
-              "en": null
+              "en": "Ask for a medical assessment, especially if it looks serious."
             },
             "explanation": {
               "es": "Describe el dolor, la lesión y cualquier cambio en el estado de la persona. Sigue las indicaciones del servicio de emergencias.",
-              "en": null
+              "en": "Describe the pain, the injury and any change in the person's condition. Follow the instructions of the emergency service."
             },
             "illustration": "call",
             "label": {
               "es": "PIDE AYUDA PROFESIONAL",
-              "en": null
+              "en": "GET PROFESSIONAL HELP"
             }
           }
         ]
@@ -191,52 +191,52 @@
       {
         "title": {
           "es": "Quemaduras",
-          "en": null
+          "en": "Burns"
         },
         "steps": [
           {
             "action": {
               "es": "Aléjate de la fuente de calor sin ponerte en riesgo.",
-              "en": null
+              "en": "Move away from the heat source without putting yourself at risk."
             },
             "explanation": {
               "es": "Antes de ayudar, evita el contacto con el peligro. No vuelvas a entrar en una zona insegura.",
-              "en": null
+              "en": "Before helping, avoid contact with the danger. Do not go back into an unsafe area."
             },
             "illustration": "safety",
             "label": {
               "es": "ALÉJATE DE LA FUENTE DE CALOR",
-              "en": null
+              "en": "MOVE AWAY FROM THE HEAT SOURCE"
             }
           },
           {
             "action": {
               "es": "Enfría la zona con agua corriente fresca.",
-              "en": null
+              "en": "Cool the area with cool running water."
             },
             "explanation": {
               "es": "El agua ayuda a enfriar la quemadura. No uses hielo ni remedios caseros; evita manipular la piel lesionada.",
-              "en": null
+              "en": "Water helps cool the burn. Do not use ice or home remedies; avoid handling the injured skin."
             },
             "illustration": "water",
             "label": {
               "es": "AGUA CORRIENTE FRESCA",
-              "en": null
+              "en": "COOL RUNNING WATER"
             }
           },
           {
             "action": {
               "es": "Busca atención si es extensa, profunda o afecta zonas delicadas.",
-              "en": null
+              "en": "Seek care if it is large, deep or affects sensitive areas."
             },
             "explanation": {
               "es": "Explica el tamaño aproximado, la zona afectada y si hay dificultad para respirar. Ante señales graves, llama a emergencias.",
-              "en": null
+              "en": "Explain the approximate size, the area affected and whether there is difficulty breathing. If there are serious signs, call emergency services."
             },
             "illustration": "call",
             "label": {
               "es": "IDENTIFICA LA GRAVEDAD Y PIDE AYUDA",
-              "en": null
+              "en": "ASSESS HOW SERIOUS IT IS AND GET HELP"
             }
           }
         ]
@@ -244,52 +244,52 @@
       {
         "title": {
           "es": "Descarga eléctrica",
-          "en": null
+          "en": "Electric shock"
         },
         "steps": [
           {
             "action": {
               "es": "No toques a la persona si sigue en contacto con electricidad.",
-              "en": null
+              "en": "Do not touch the person if they are still in contact with electricity."
             },
             "explanation": {
               "es": "La corriente puede alcanzar a quien intenta ayudar. Mantén distancia de cables y equipos dañados.",
-              "en": null
+              "en": "The current can reach whoever tries to help. Keep away from damaged cables and equipment."
             },
             "illustration": "electricity",
             "label": {
               "es": "NO TOQUES CABLES NI A LA PERSONA",
-              "en": null
+              "en": "DO NOT TOUCH CABLES OR THE PERSON"
             }
           },
           {
             "action": {
               "es": "Corta la corriente solo si puedes hacerlo sin riesgo.",
-              "en": null
+              "en": "Cut the power only if you can do it without risk."
             },
             "explanation": {
               "es": "Usa un interruptor o corte seguro. Si no puedes hacerlo con seguridad, aléjate y espera al personal capacitado.",
-              "en": null
+              "en": "Use a switch or a safe shut-off. If you cannot do it safely, move away and wait for trained personnel."
             },
             "illustration": "electricity",
             "label": {
               "es": "CORTA LA ENERGÍA SOLO SI ES SEGURO",
-              "en": null
+              "en": "CUT THE POWER ONLY IF IT IS SAFE"
             }
           },
           {
             "action": {
               "es": "Cuando sea seguro, comprueba su respuesta y respiración y pide ayuda.",
-              "en": null
+              "en": "When it is safe, check whether they respond and breathe, and call for help."
             },
             "explanation": {
               "es": "Una descarga requiere valoración profesional, aunque la persona parezca recuperarse. Sigue las instrucciones del servicio de emergencias.",
-              "en": null
+              "en": "An electric shock needs a professional assessment, even if the person seems to recover. Follow the instructions of the emergency service."
             },
             "illustration": "call",
             "label": {
               "es": "VALORA Y ACTIVA EMERGENCIAS",
-              "en": null
+              "en": "CHECK THE PERSON AND CALL EMERGENCY SERVICES"
             }
           }
         ]
@@ -297,52 +297,52 @@
       {
         "title": {
           "es": "Desmayo o pérdida de conocimiento",
-          "en": null
+          "en": "Fainting or loss of consciousness"
         },
         "steps": [
           {
             "action": {
               "es": "Asegura la escena y observa si responde.",
-              "en": null
+              "en": "Make the scene safe and see whether the person responds."
             },
             "explanation": {
               "es": "Habla con la persona y fíjate si responde con normalidad. No la sacudas ni la muevas si sospechas una lesión.",
-              "en": null
+              "en": "Talk to the person and see whether they respond normally. Do not shake or move them if you suspect an injury."
             },
             "illustration": "breathe",
             "label": {
               "es": "OBSERVA SIN SACUDIR",
-              "en": null
+              "en": "OBSERVE WITHOUT SHAKING"
             }
           },
           {
             "action": {
               "es": "Comprueba si respira normalmente.",
-              "en": null
+              "en": "Check whether they are breathing normally."
             },
             "explanation": {
               "es": "La falta de respuesta o una respiración anormal requiere activar ayuda urgente. Si tienes dudas, llama y sigue las indicaciones del operador.",
-              "en": null
+              "en": "No response or abnormal breathing requires urgent help. If in doubt, call and follow the operator's instructions."
             },
             "illustration": "breathe",
             "label": {
               "es": "REVISA LA RESPIRACIÓN",
-              "en": null
+              "en": "CHECK BREATHING"
             }
           },
           {
             "action": {
               "es": "No la dejes sola; observa cualquier cambio.",
-              "en": null
+              "en": "Do not leave them alone; watch for any change."
             },
             "explanation": {
               "es": "Permanece cerca, vigila su estado y comunica a emergencias si empeora o no se recupera normalmente.",
-              "en": null
+              "en": "Stay close, watch their condition and tell emergency services if they get worse or do not recover normally."
             },
             "illustration": "accompany",
             "label": {
               "es": "ACOMPAÑA Y VIGILA",
-              "en": null
+              "en": "STAY AND WATCH"
             }
           }
         ]
@@ -350,52 +350,52 @@
       {
         "title": {
           "es": "Atragantamiento",
-          "en": null
+          "en": "Choking"
         },
         "steps": [
           {
             "action": {
               "es": "Observa si puede hablar, respirar o toser.",
-              "en": null
+              "en": "See whether the person can speak, breathe or cough."
             },
             "explanation": {
               "es": "La capacidad de hablar, respirar o toser ayuda a reconocer si la obstrucción es grave. Mantén la calma y pide ayuda cercana.",
-              "en": null
+              "en": "Being able to speak, breathe or cough helps tell whether the blockage is serious. Stay calm and ask people nearby for help."
             },
             "illustration": "breathe",
             "label": {
               "es": "OBSERVA HABLA, RESPIRACIÓN Y TOS",
-              "en": null
+              "en": "WATCH SPEECH, BREATHING AND COUGHING"
             }
           },
           {
             "action": {
               "es": "Si no puede respirar o hablar, activa emergencias.",
-              "en": null
+              "en": "If they cannot breathe or speak, call emergency services."
             },
             "explanation": {
               "es": "Pide a alguien que llame al servicio local de emergencias. No retrases la llamada ante una obstrucción grave.",
-              "en": null
+              "en": "Ask someone to call the local emergency service. Do not delay the call if the blockage is serious."
             },
             "illustration": "call",
             "label": {
               "es": "PIDE AYUDA URGENTE",
-              "en": null
+              "en": "GET URGENT HELP"
             }
           },
           {
             "action": {
               "es": "Sigue las instrucciones del operador y no introduzcas los dedos a ciegas.",
-              "en": null
+              "en": "Follow the operator's instructions and do not put your fingers in blindly."
             },
             "explanation": {
               "es": "Las maniobras dependen de la edad y la situación. Sigue instrucciones profesionales y no intentes sacar un objeto que no ves.",
-              "en": null
+              "en": "The right maneuvers depend on age and the situation. Follow professional instructions and do not try to remove an object you cannot see."
             },
             "illustration": "safety",
             "label": {
               "es": "SIGUE GUÍA PROFESIONAL; NO BUSQUES A CIEGAS",
-              "en": null
+              "en": "FOLLOW PROFESSIONAL GUIDANCE; DO NOT SEARCH BLINDLY"
             }
           }
         ]
@@ -403,52 +403,52 @@
       {
         "title": {
           "es": "Golpe o trauma",
-          "en": null
+          "en": "Blow or trauma"
         },
         "steps": [
           {
             "action": {
               "es": "Mira si hay peligro antes de acercarte.",
-              "en": null
+              "en": "Look for danger before approaching."
             },
             "explanation": {
               "es": "El lugar puede seguir siendo inseguro después de un accidente. No te expongas a tráfico, fuego, estructuras inestables u otros riesgos.",
-              "en": null
+              "en": "The place may still be unsafe after an accident. Do not expose yourself to traffic, fire, unstable structures or other risks."
             },
             "illustration": "safety",
             "label": {
               "es": "REVISA LA ESCENA",
-              "en": null
+              "en": "CHECK THE SCENE"
             }
           },
           {
             "action": {
               "es": "Observa respuesta, respiración y sangrado visible.",
-              "en": null
+              "en": "Check response, breathing and visible bleeding."
             },
             "explanation": {
               "es": "Comunica de inmediato cualquier dificultad para respirar, pérdida de conocimiento o sangrado importante.",
-              "en": null
+              "en": "Report right away any difficulty breathing, loss of consciousness or heavy bleeding."
             },
             "illustration": "breathe",
             "label": {
               "es": "OBSERVA CAMBIOS IMPORTANTES",
-              "en": null
+              "en": "WATCH FOR IMPORTANT CHANGES"
             }
           },
           {
             "action": {
               "es": "Evita mover a la persona si sospechas lesión de cabeza, cuello o espalda.",
-              "en": null
+              "en": "Avoid moving the person if you suspect a head, neck or back injury."
             },
             "explanation": {
               "es": "No le pidas que se levante o camine. Espera asistencia profesional y mantén a la persona vigilada.",
-              "en": null
+              "en": "Do not ask them to get up or walk. Wait for professional assistance and keep watching the person."
             },
             "illustration": "immobilize",
             "label": {
               "es": "EVITA MOVIMIENTOS INNECESARIOS",
-              "en": null
+              "en": "AVOID UNNECESSARY MOVEMENT"
             }
           }
         ]
@@ -456,52 +456,52 @@
       {
         "title": {
           "es": "Mordedura o picadura",
-          "en": null
+          "en": "Bite or sting"
         },
         "steps": [
           {
             "action": {
               "es": "Aléjate del animal o insecto y protege a quienes están cerca.",
-              "en": null
+              "en": "Move away from the animal or insect and protect the people nearby."
             },
             "explanation": {
               "es": "Evita otro contacto y no intentes capturar al animal. La seguridad de las personas es lo primero.",
-              "en": null
+              "en": "Avoid further contact and do not try to catch the animal. People's safety comes first."
             },
             "illustration": "safety",
             "label": {
               "es": "ALÉJATE DEL RIESGO",
-              "en": null
+              "en": "MOVE AWAY FROM THE DANGER"
             }
           },
           {
             "action": {
               "es": "Observa si aparece dificultad para respirar o hinchazón importante.",
-              "en": null
+              "en": "Watch for difficulty breathing or significant swelling."
             },
             "explanation": {
               "es": "Una reacción grave requiere ayuda urgente. Describe cuándo ocurrió y qué cambios observas.",
-              "en": null
+              "en": "A serious reaction needs urgent help. Describe when it happened and what changes you see."
             },
             "illustration": "breathe",
             "label": {
               "es": "VIGILA REACCIONES GRAVES",
-              "en": null
+              "en": "WATCH FOR SERIOUS REACTIONS"
             }
           },
           {
             "action": {
               "es": "Busca valoración médica si hay síntomas preocupantes.",
-              "en": null
+              "en": "Get a medical assessment if there are worrying symptoms."
             },
             "explanation": {
               "es": "Si se trata de una serpiente, no cortes ni succiones la herida. Conserva distancia y sigue instrucciones profesionales.",
-              "en": null
+              "en": "If it is a snake, do not cut or suck the wound. Keep your distance and follow professional instructions."
             },
             "illustration": "call",
             "label": {
               "es": "EVITA REMEDIOS PELIGROSOS",
-              "en": null
+              "en": "AVOID DANGEROUS REMEDIES"
             }
           }
         ]
@@ -509,52 +509,52 @@
       {
         "title": {
           "es": "Ahogamiento",
-          "en": null
+          "en": "Drowning"
         },
         "steps": [
           {
             "action": {
               "es": "No te pongas en peligro al intentar rescatar.",
-              "en": null
+              "en": "Do not put yourself in danger when trying to rescue."
             },
             "explanation": {
               "es": "Una persona que ayuda también puede quedar en riesgo. Pide apoyo y usa únicamente una forma de ayuda que no te exponga.",
-              "en": null
+              "en": "A person who helps can also end up at risk. Ask for support and only use a way of helping that does not expose you."
             },
             "illustration": "water",
             "label": {
               "es": "RESCATE SEGURO",
-              "en": null
+              "en": "SAFE RESCUE"
             }
           },
           {
             "action": {
               "es": "Pide ayuda de emergencia lo antes posible.",
-              "en": null
+              "en": "Call for emergency help as soon as possible."
             },
             "explanation": {
               "es": "Indica el lugar exacto y que hubo un incidente en el agua. Si hay otras personas, asígnales tareas concretas.",
-              "en": null
+              "en": "Give the exact location and say there was an incident in the water. If other people are there, give them specific tasks."
             },
             "illustration": "call",
             "label": {
               "es": "COMPARTE EL LUGAR DEL INCIDENTE",
-              "en": null
+              "en": "SHARE WHERE IT HAPPENED"
             }
           },
           {
             "action": {
               "es": "Aunque parezca recuperarse, necesita valoración médica.",
-              "en": null
+              "en": "Even if they seem to recover, they need a medical assessment."
             },
             "explanation": {
               "es": "Permanece con la persona y vigila cambios mientras llega ayuda. Sigue las instrucciones del servicio de emergencias.",
-              "en": null
+              "en": "Stay with the person and watch for changes until help arrives. Follow the instructions of the emergency service."
             },
             "illustration": "breathe",
             "label": {
               "es": "VIGILA Y SOLICITA VALORACIÓN",
-              "en": null
+              "en": "WATCH AND GET AN ASSESSMENT"
             }
           }
         ]
@@ -562,52 +562,52 @@
       {
         "title": {
           "es": "Convulsión",
-          "en": null
+          "en": "Seizure"
         },
         "steps": [
           {
             "action": {
               "es": "Despeja objetos peligrosos alrededor.",
-              "en": null
+              "en": "Clear dangerous objects from around them."
             },
             "explanation": {
               "es": "Haz espacio para reducir golpes. Mide el tiempo desde el inicio y permanece cerca sin sujetar a la persona.",
-              "en": null
+              "en": "Make space to reduce injuries from hitting things. Time it from the start and stay close without holding the person down."
             },
             "illustration": "space",
             "label": {
               "es": "DESPEJA EL ÁREA",
-              "en": null
+              "en": "CLEAR THE AREA"
             }
           },
           {
             "action": {
               "es": "No la sujetes ni pongas objetos en su boca.",
-              "en": null
+              "en": "Do not hold them down or put objects in their mouth."
             },
             "explanation": {
               "es": "Intentar detener los movimientos o introducir algo en la boca puede causar lesiones. No ofrezcas comida o bebida durante la convulsión.",
-              "en": null
+              "en": "Trying to stop the movements or putting something in their mouth can cause injuries. Do not offer food or drink during the seizure."
             },
             "illustration": "space",
             "label": {
               "es": "NO SUJETES NI INTRODUZCAS OBJETOS",
-              "en": null
+              "en": "DO NOT HOLD THEM DOWN OR PUT ANYTHING IN THEIR MOUTH"
             }
           },
           {
             "action": {
               "es": "Pide ayuda si es la primera convulsión, dura más de cinco minutos o se repite.",
-              "en": null
+              "en": "Call for help if it is their first seizure, it lasts more than five minutes or it happens again."
             },
             "explanation": {
               "es": "También se recomienda activar emergencias si ocurrió en el agua, hay lesión, dificultad respiratoria o no recupera su estado habitual.",
-              "en": null
+              "en": "It is also recommended to call emergency services if it happened in water, there is an injury, difficulty breathing, or the person does not return to their usual state."
             },
             "illustration": "call",
             "label": {
               "es": "IDENTIFICA CUÁNDO ES URGENTE",
-              "en": null
+              "en": "KNOW WHEN IT IS URGENT"
             }
           }
         ]
@@ -615,52 +615,52 @@
       {
         "title": {
           "es": "Intoxicación",
-          "en": null
+          "en": "Poisoning"
         },
         "steps": [
           {
             "action": {
               "es": "Aléjate de la sustancia y evita el contacto.",
-              "en": null
+              "en": "Move away from the substance and avoid contact."
             },
             "explanation": {
               "es": "No te expongas al producto. Si el aire o el lugar parecen peligrosos, sal de allí y pide ayuda.",
-              "en": null
+              "en": "Do not expose yourself to the product. If the air or the place seems dangerous, get out and call for help."
             },
             "illustration": "substance",
             "label": {
               "es": "EVITA EXPONERTE",
-              "en": null
+              "en": "AVOID EXPOSING YOURSELF"
             }
           },
           {
             "action": {
               "es": "Ante síntomas graves, llama a emergencias o a un centro de toxicología.",
-              "en": null
+              "en": "If there are serious symptoms, call emergency services or a poison control center."
             },
             "explanation": {
               "es": "Ten a mano el nombre del producto, la cantidad aproximada y la hora, si los conoces. No retrases la llamada para buscar esos datos.",
-              "en": null
+              "en": "Have the product name, the approximate amount and the time at hand, if you know them. Do not delay the call to look for this information."
             },
             "illustration": "call",
             "label": {
               "es": "COMUNICA PRODUCTO Y HORA",
-              "en": null
+              "en": "REPORT THE PRODUCT AND THE TIME"
             }
           },
           {
             "action": {
               "es": "No provoques el vómito ni des alimentos o bebidas salvo indicación profesional.",
-              "en": null
+              "en": "Do not induce vomiting or give food or drink unless a professional tells you to."
             },
             "explanation": {
               "es": "Conserva el envase para informar al personal de salud y sigue sus instrucciones específicas.",
-              "en": null
+              "en": "Keep the container to inform health personnel and follow their specific instructions."
             },
             "illustration": "substance",
             "label": {
               "es": "NO PROVOQUES EL VÓMITO",
-              "en": null
+              "en": "DO NOT INDUCE VOMITING"
             }
           }
         ]
@@ -668,52 +668,52 @@
       {
         "title": {
           "es": "Dificultad para respirar",
-          "en": null
+          "en": "Difficulty breathing"
         },
         "steps": [
           {
             "action": {
               "es": "Mantén la calma y permite que la persona adopte una posición cómoda.",
-              "en": null
+              "en": "Stay calm and let the person get into a comfortable position."
             },
             "explanation": {
               "es": "No la obligues a acostarse o caminar. Reduce aglomeraciones y mantén el entorno tranquilo.",
-              "en": null
+              "en": "Do not make them lie down or walk. Keep people from crowding around and keep the surroundings calm."
             },
             "illustration": "breathe",
             "label": {
               "es": "POSICIÓN CÓMODA",
-              "en": null
+              "en": "COMFORTABLE POSITION"
             }
           },
           {
             "action": {
               "es": "Activa emergencias si la dificultad es intensa o empeora.",
-              "en": null
+              "en": "Call emergency services if the difficulty is severe or getting worse."
             },
             "explanation": {
               "es": "Al llamar, indica si comenzó de repente, si está empeorando y si la persona puede hablar con normalidad.",
-              "en": null
+              "en": "When you call, say whether it started suddenly, whether it is getting worse and whether the person can speak normally."
             },
             "illustration": "call",
             "label": {
               "es": "PIDE AYUDA ANTE SEÑALES GRAVES",
-              "en": null
+              "en": "GET HELP IF THERE ARE SERIOUS SIGNS"
             }
           },
           {
             "action": {
               "es": "Permanece con la persona y observa cambios.",
-              "en": null
+              "en": "Stay with the person and watch for changes."
             },
             "explanation": {
               "es": "Ayuda solo con medicamentos de emergencia que le hayan sido indicados a esa persona, siguiendo sus instrucciones. No improvises tratamientos.",
-              "en": null
+              "en": "Only help with emergency medication that has been prescribed to that person, following its instructions. Do not improvise treatments."
             },
             "illustration": "accompany",
             "label": {
               "es": "ACOMPAÑA Y VIGILA",
-              "en": null
+              "en": "STAY AND WATCH"
             }
           }
         ]
@@ -721,52 +721,52 @@
       {
         "title": {
           "es": "Otra emergencia",
-          "en": null
+          "en": "Other emergency"
         },
         "steps": [
           {
             "action": {
               "es": "Mantén la calma y comprueba que el lugar sea seguro.",
-              "en": null
+              "en": "Stay calm and check that the place is safe."
             },
             "explanation": {
               "es": "Antes de acercarte, identifica peligros para ti y para otras personas. Pide ayuda si no puedes controlar el riesgo.",
-              "en": null
+              "en": "Before approaching, identify dangers to you and to others. Call for help if you cannot control the risk."
             },
             "illustration": "safety",
             "label": {
               "es": "PROTÉGETE PRIMERO",
-              "en": null
+              "en": "PROTECT YOURSELF FIRST"
             }
           },
           {
             "action": {
               "es": "Observa si la persona responde y respira normalmente.",
-              "en": null
+              "en": "See whether the person responds and breathes normally."
             },
             "explanation": {
               "es": "Si no responde o no respira con normalidad, activa emergencias de inmediato y sigue las instrucciones del operador.",
-              "en": null
+              "en": "If they do not respond or are not breathing normally, call emergency services right away and follow the operator's instructions."
             },
             "illustration": "breathe",
             "label": {
               "es": "OBSERVA RESPUESTA Y RESPIRACIÓN",
-              "en": null
+              "en": "CHECK RESPONSE AND BREATHING"
             }
           },
           {
             "action": {
               "es": "Explica qué ocurrió, dónde estás y qué ayuda se necesita.",
-              "en": null
+              "en": "Explain what happened, where you are and what help is needed."
             },
             "explanation": {
               "es": "Una ubicación clara y una descripción breve ayudan a orientar la respuesta. No administres tratamientos que no conoces.",
-              "en": null
+              "en": "A clear location and a short description help guide the response. Do not give treatments you are not familiar with."
             },
             "illustration": "call",
             "label": {
               "es": "COMUNICA LUGAR Y SITUACIÓN",
-              "en": null
+              "en": "REPORT THE LOCATION AND THE SITUATION"
             }
           }
         ]
@@ -776,81 +776,81 @@
   "practice": {
     "counter": {
       "es": "Pregunta {current} de {total}",
-      "en": null
+      "en": "Question {current} of {total}"
     },
     "continueButton": {
       "es": "CONTINUAR",
-      "en": null
+      "en": "CONTINUE"
     },
     "backButton": {
       "es": "VOLVER A PREMIUM",
-      "en": null
+      "en": "BACK TO PREMIUM"
     },
     "end": {
       "title": {
         "es": "Práctica terminada",
-        "en": null
+        "en": "Practice complete"
       },
       "result": {
         "es": "Respuestas correctas: {score} de {total}",
-        "en": null
+        "en": "Correct answers: {score} of {total}"
       },
       "note": {
         "es": "Repasa las guías cuando quieras. Este ejercicio es educativo y no reemplaza capacitación profesional.",
-        "en": null
+        "en": "Review the guides whenever you like. This exercise is educational and does not replace professional training."
       },
       "repeatButton": {
         "es": "REPETIR PRÁCTICA",
-        "en": null
+        "en": "REPEAT PRACTICE"
       }
     },
     "questions": [
       {
         "question": {
           "es": "¿Qué haces antes de acercarte a una emergencia?",
-          "en": null
+          "en": "What do you do before approaching an emergency?"
         },
         "options": [
           {
             "es": "Compruebo que el lugar sea seguro",
-            "en": null
+            "en": "I check that the place is safe"
           },
           {
             "es": "Corro sin mirar",
-            "en": null
+            "en": "I run in without looking"
           }
         ],
         "correct": 0,
         "explanation": {
           "es": "Evitar que quien ayuda también resulte afectado es el primer paso.",
-          "en": null
+          "en": "Making sure the person helping does not get hurt too is the first step."
         }
       },
       {
         "question": {
           "es": "Si alguien recibe una descarga, ¿debes tocarlo mientras sigue conectado a la corriente?",
-          "en": null
+          "en": "If someone gets an electric shock, should you touch them while they are still connected to the current?"
         },
         "options": [
           {
             "es": "Sí, de inmediato",
-            "en": null
+            "en": "Yes, right away"
           },
           {
             "es": "No; primero debe ser seguro cortar la corriente",
-            "en": null
+            "en": "No; first it must be safe to cut the power"
           }
         ],
         "correct": 1,
         "explanation": {
           "es": "La corriente también puede alcanzar a quien intenta ayudar.",
-          "en": null
+          "en": "The current can also reach whoever tries to help."
         }
       },
       {
         "question": {
           "es": "Durante una convulsión, ¿debes sujetar a la persona o poner algo en su boca?",
-          "en": null
+          "en": "During a seizure, should you hold the person down or put something in their mouth?"
         },
         "options": [
           {
@@ -859,19 +859,19 @@
           },
           {
             "es": "Sí, para detenerla",
-            "en": null
+            "en": "Yes, to stop it"
           }
         ],
         "correct": 0,
         "explanation": {
           "es": "Despeja el espacio, no la sujetes ni introduzcas objetos.",
-          "en": null
+          "en": "Clear the space; do not hold them down or put objects in their mouth."
         }
       },
       {
         "question": {
           "es": "Ante una intoxicación, ¿conviene provocar el vómito por cuenta propia?",
-          "en": null
+          "en": "In a case of poisoning, should you induce vomiting on your own?"
         },
         "options": [
           {
@@ -880,34 +880,34 @@
           },
           {
             "es": "No; sigue orientación profesional",
-            "en": null
+            "en": "No; follow professional guidance"
           }
         ],
         "correct": 1,
         "explanation": {
           "es": "No provoques el vómito ni des alimentos o bebidas salvo que un profesional lo indique.",
-          "en": null
+          "en": "Do not induce vomiting or give food or drink unless a professional says so."
         }
       },
       {
         "question": {
           "es": "¿Qué información ayuda al pedir ayuda?",
-          "en": null
+          "en": "What information helps when calling for help?"
         },
         "options": [
           {
             "es": "La ubicación y qué ocurrió",
-            "en": null
+            "en": "The location and what happened"
           },
           {
             "es": "Solo mi nombre",
-            "en": null
+            "en": "Only my name"
           }
         ],
         "correct": 0,
         "explanation": {
           "es": "Indica dónde estás, qué ocurrió y cómo se encuentra la persona.",
-          "en": null
+          "en": "Say where you are, what happened and how the person is doing."
         }
       }
     ]
