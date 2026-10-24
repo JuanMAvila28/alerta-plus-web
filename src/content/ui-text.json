@@ -11,7 +11,7 @@
     },
     "splashTagline": {
       "es": "Preparación y apoyo para tu familia",
-      "en": null
+      "en": "Preparedness and support for your family"
     }
   },
   "menu": {
@@ -53,7 +53,7 @@
     },
     "privacy": {
       "es": "Política de privacidad",
-      "en": null
+      "en": "Privacy policy"
     }
   },
   "emergency": {
@@ -163,11 +163,11 @@
     },
     "pickContact": {
       "es": "📱 ELEGIR DESDE MIS CONTACTOS",
-      "en": null
+      "en": "📱 CHOOSE FROM MY CONTACTS"
     },
     "selectedPhone": {
       "es": "Teléfono seleccionado: {phone}",
-      "en": null
+      "en": "Selected phone: {phone}"
     },
     "relationship": {
       "es": "Relación con esta persona",
@@ -237,11 +237,11 @@
     },
     "locationLine": {
       "es": "Ubicación{accuracy}: {link}",
-      "en": null
+      "en": "Location{accuracy}: {link}"
     },
     "accuracy": {
       "es": " (precisión aproximada: {meters} m)",
-      "en": null
+      "en": " (approximate accuracy: {meters} m)"
     },
     "sent": {
       "es": "SMS enviados a tu núcleo.",
@@ -257,11 +257,11 @@
     },
     "noLocation": {
       "es": "No fue posible obtener la ubicación; se enviará el aviso normal.",
-      "en": null
+      "en": "Your location could not be obtained; the standard alert will be sent."
     },
     "locationDenied": {
       "es": "Se enviará el aviso sin ubicación porque no se concedió el permiso.",
-      "en": null
+      "en": "The alert will be sent without your location because permission was not granted."
     }
   },
   "premium": {
@@ -275,7 +275,7 @@
     },
     "location": {
       "es": "📍 Premium también incluye el envío de tu ubicación actual junto con el aviso de emergencia, para que tus contactos sepan dónde encontrarte.",
-      "en": null
+      "en": "📍 Premium also includes sending your current location with the emergency alert, so your contacts know where to find you."
     },
     "oneTimePayment": {
       "es": "Pago único. Acceso permanente después de que Google Play confirme la compra.",

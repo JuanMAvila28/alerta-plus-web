@@ -17,6 +17,11 @@ import { CheckList } from './components/CheckList';
 import EarthquakeScreen from './screens/EarthquakeScreen';
 import EmergencyMenu from './screens/EmergencyMenu';
 import ProtocolScreen from './screens/ProtocolScreen';
+import PremiumScreen from './screens/PremiumScreen';
+import LibraryScreen from './screens/LibraryScreen';
+import GuideScreen from './screens/GuideScreen';
+import PracticeScreen from './screens/PracticeScreen';
+import { RequirePremium } from './components/RequirePremium';
 import UnderConstruction from './screens/UnderConstruction';
 
 // Screens that need an account (plan section 5).
@@ -29,9 +34,12 @@ const ACCOUNT_ROUTES: [string, ReactNode][] = [
   ['/nucleo', <ContactsScreen />],
   ['/nucleo/persona', <PersonScreen />],
   ['/nucleo/persona/:index', <PersonScreen />],
-  // Later phases.
+  ['/premium', <PremiumScreen />],
+  ['/premium/guias', <RequirePremium><LibraryScreen /></RequirePremium>],
+  ['/premium/guias/:index', <RequirePremium><GuideScreen /></RequirePremium>],
+  ['/premium/practica', <RequirePremium><PracticeScreen /></RequirePremium>],
+  // Phase 5 (SMS alerts) is postponed.
   ['/nucleo/avisar/*', <UnderConstruction />],
-  ['/premium/*', <UnderConstruction />],
 ];
 
 export default function App() {

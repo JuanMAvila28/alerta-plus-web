@@ -140,6 +140,24 @@ export const newTexts = {
     },
     next: { es: 'SIGUIENTE PASO ▶', en: 'NEXT STEP ▶' },
   },
+  // Phase 6: Premium without payments (D2 and D3 pending).
+  premium: {
+    comingSoon: {
+      es: 'La compra de Premium estará disponible próximamente.',
+      en: 'Buying Premium will be available soon.',
+    },
+    restored: { es: 'Premium está activo en tu cuenta.', en: 'Premium is active on your account.' },
+    notFound: {
+      es: 'No encontramos una compra de Premium en tu cuenta.',
+      en: 'We could not find a Premium purchase on your account.',
+    },
+    needsConnection: {
+      es: 'Necesitas conexión a internet para restaurar la compra.',
+      en: 'You need an internet connection to restore your purchase.',
+    },
+    correct: { es: '✓ Correcto', en: '✓ Correct' },
+    incorrect: { es: '✗ Incorrecto', en: '✗ Incorrect' },
+  },
   // Temporary while the later phases are built.
   underConstruction: {
     title: { es: 'Pantalla en construcción', en: 'Screen under construction' },
