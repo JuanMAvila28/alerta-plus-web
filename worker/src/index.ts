@@ -5,6 +5,7 @@ import { requireUser } from './tokens';
 import { googleLogin, logout, refresh } from './auth';
 import { getDocuments, putDocument } from './documents';
 import { deleteAccount, exportAccount, saveConsent } from './account';
+import { createCheckout, wompiEvents } from './payments';
 
 export type { Env };
 
@@ -30,6 +31,8 @@ async function route(request: Request, env: Env): Promise<Response> {
   }
   if (method === 'GET' && pathname === '/api/account/export') return exportAccount(env, await requireUser(request, env));
   if (method === 'DELETE' && pathname === '/api/account') return deleteAccount(env, await requireUser(request, env));
+  if (method === 'POST' && pathname === '/api/checkout') return createCheckout(request, env, await requireUser(request, env));
+  if (method === 'POST' && pathname === '/api/payments/wompi') return wompiEvents(request, env);
 
   throw new HttpError(404, 'not_found', 'Route not found.');
 }
