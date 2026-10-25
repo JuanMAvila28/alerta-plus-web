@@ -2,13 +2,14 @@ import { CaretRight, type Icon } from '@phosphor-icons/react';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 
-/** Icon tile color by meaning: preparation, safe condition (green), premium (brand orange), settings. */
-type Tone = 'brand' | 'safe' | 'signal' | 'muted';
+/** Icon tile color by meaning: preparation, safe condition (green), premium (brand orange), emergency, settings. */
+type Tone = 'brand' | 'safe' | 'signal' | 'danger' | 'muted';
 
 const TONES: Record<Tone, string> = {
   brand: 'text-brand',
   safe: 'text-safe',
   signal: 'text-signal',
+  danger: 'text-danger',
   muted: 'text-ink-muted',
 };
 

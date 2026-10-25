@@ -5,9 +5,9 @@ export function Illustration({ name, label }: { name: string; label: string }) {
       <img
         src={`/illustrations/${name}.svg`}
         alt=""
-        className="h-[175px] w-full rounded-[18px] bg-illustration-bg object-contain"
+        className="h-[175px] w-full rounded-[20px] bg-illustration-bg object-contain"
       />
-      <figcaption className="text-center text-sm font-bold">{label}</figcaption>
+      <figcaption className="text-center text-caption font-bold tracking-[0.02em] text-ink-muted">{label}</figcaption>
     </figure>
   );
 }

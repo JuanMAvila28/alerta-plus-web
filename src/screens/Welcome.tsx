@@ -64,17 +64,20 @@ export default function Welcome() {
       </a>
 
       <label className="mt-2 flex cursor-pointer items-start gap-4 rounded-[18px] border-2 border-line p-4 transition-colors duration-150 has-checked:border-alert-blue has-checked:bg-alert-blue/6">
-        <input
-          type="checkbox"
-          className="peer sr-only"
-          checked={accepted}
-          onChange={(event) => setAccepted(event.target.checked)}
-        />
-        <span
-          aria-hidden="true"
-          className="flex size-7 shrink-0 items-center justify-center rounded-[8px] border-2 border-ink/40 bg-page text-white transition-colors duration-150 peer-checked:border-alert-blue peer-checked:bg-alert-blue peer-focus-visible:outline-3 peer-focus-visible:outline-offset-3 peer-focus-visible:outline-focus [&>svg]:scale-50 [&>svg]:opacity-0 [&>svg]:transition-[opacity,scale] [&>svg]:duration-150 peer-checked:[&>svg]:scale-100 peer-checked:[&>svg]:opacity-100"
-        >
-          <Check size={18} weight="bold" />
+        {/* The real checkbox, restyled: taps, keyboard and screen readers all reach the native control. */}
+        <span className="relative flex size-7 shrink-0">
+          <input
+            type="checkbox"
+            className="peer size-7 cursor-pointer appearance-none rounded-[8px] border-2 border-ink/50 bg-page transition-colors duration-150 checked:border-alert-blue checked:bg-alert-blue"
+            checked={accepted}
+            onChange={(event) => setAccepted(event.target.checked)}
+          />
+          <Check
+            size={18}
+            weight="bold"
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 m-auto scale-50 text-white opacity-0 transition-[opacity,scale] duration-150 peer-checked:scale-100 peer-checked:opacity-100"
+          />
         </span>
         <span className="text-ink">{t(w.consent)}</span>
       </label>

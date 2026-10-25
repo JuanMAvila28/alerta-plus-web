@@ -46,14 +46,33 @@ export interface SpeakHandlers {
 // Chrome can garbage-collect an utterance before `end` fires; keep a reference while it runs.
 const alive = new Set<SpeechSynthesisUtterance>();
 
-/** Reads `text` and calls `onEnd` after the last sentence. Returns a function that cancels it. */
+/**
+ * Chrome silently drops a `speak()` made in the same instant as a `cancel()`: no `start` event ever
+ * arrives and the reader would think the voice was blocked. Keep this gap between the two.
+ */
+const SETTLE_MS = 120;
+let lastCancel = Number.NEGATIVE_INFINITY;
+
+function cancelSpeech() {
+  window.speechSynthesis.cancel();
+  lastCancel = performance.now();
+}
+
+/**
+ * Reads `text` and calls `onEnd` after the last sentence. Returns a function that cancels it.
+ * With nothing speaking and no recent cancel it speaks synchronously: iOS only allows the first
+ * reading inside the tap itself.
+ */
 export function speak(text: string, language: Language, handlers: SpeakHandlers): () => void {
   const synth = window.speechSynthesis;
   const sentences = splitSentences(text);
   let cancelled = false;
   let started = false;
+  let running = false;
+  let finished = false;
+  let timer: ReturnType<typeof setTimeout> | undefined;
 
-  synth.cancel();
+  if (synth.speaking || synth.pending) cancelSpeech();
   if (sentences.length === 0) {
     queueMicrotask(() => !cancelled && handlers.onEnd());
     return () => {
@@ -61,39 +80,50 @@ export function speak(text: string, language: Language, handlers: SpeakHandlers)
     };
   }
 
-  const voice = pickVoice(voices.length ? voices : synth.getVoices(), language);
-  sentences.forEach((sentence, index) => {
-    const utterance = new SpeechSynthesisUtterance(sentence);
-    utterance.lang = SPEECH_LANG[language];
-    utterance.rate = RATE;
-    if (voice) utterance.voice = voice;
-    alive.add(utterance);
-    utterance.onstart = () => {
-      if (cancelled || started) return;
-      started = true;
-      handlers.onStart?.();
-    };
-    utterance.onend = () => {
-      alive.delete(utterance);
-      if (!cancelled && index === sentences.length - 1) handlers.onEnd();
-    };
-    utterance.onerror = (event) => {
-      alive.delete(utterance);
-      // `interrupted` / `canceled` come from our own cancel().
-      if (cancelled || event.error === 'interrupted' || event.error === 'canceled') return;
-      cancelled = true;
-      synth.cancel();
-      handlers.onError(event.error === 'not-allowed' ? 'not-allowed' : 'failed');
-    };
-    synth.speak(utterance);
-  });
+  const run = () => {
+    running = true;
+    const voice = pickVoice(voices.length ? voices : synth.getVoices(), language);
+    sentences.forEach((sentence, index) => {
+      const utterance = new SpeechSynthesisUtterance(sentence);
+      utterance.lang = SPEECH_LANG[language];
+      utterance.rate = RATE;
+      if (voice) utterance.voice = voice;
+      alive.add(utterance);
+      utterance.onstart = () => {
+        if (cancelled || started) return;
+        started = true;
+        handlers.onStart?.();
+      };
+      utterance.onend = () => {
+        alive.delete(utterance);
+        if (cancelled || index !== sentences.length - 1) return;
+        finished = true;
+        handlers.onEnd();
+      };
+      utterance.onerror = (event) => {
+        alive.delete(utterance);
+        // `interrupted` / `canceled` come from our own cancel().
+        if (cancelled || event.error === 'interrupted' || event.error === 'canceled') return;
+        cancelled = true;
+        cancelSpeech();
+        handlers.onError(event.error === 'not-allowed' ? 'not-allowed' : 'failed');
+      };
+      synth.speak(utterance);
+    });
+  };
+
+  const wait = lastCancel + SETTLE_MS - performance.now();
+  if (wait > 0) timer = setTimeout(() => !cancelled && run(), wait);
+  else run();
 
   return () => {
     cancelled = true;
-    synth.cancel();
+    clearTimeout(timer);
+    // Nothing to cancel if it never began or already ended: skipping it keeps the next reading immediate.
+    if (running && !finished) cancelSpeech();
   };
 }
 
 export function stopSpeaking() {
-  if (isSpeechAvailable()) window.speechSynthesis.cancel();
+  if (isSpeechAvailable()) cancelSpeech();
 }

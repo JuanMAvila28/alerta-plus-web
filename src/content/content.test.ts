@@ -110,4 +110,26 @@ describe('content', () => {
       expect(q.correct).toBeLessThan(q.options.length);
     }
   });
+
+  it('premium guides follow the protocol order (the library reuses the protocol icons by position)', () => {
+    const pairs = premiumContent.library.guides.map((guide, index) => [
+      protocolsContent.protocols[index]?.id,
+      guide.title.es,
+    ]);
+    expect(pairs).toEqual([
+      ['herida', 'Heridas y sangrado'],
+      ['fractura', 'Fracturas'],
+      ['quemadura', 'Quemaduras'],
+      ['electrocucion', 'Descarga eléctrica'],
+      ['desmayo', 'Desmayo o pérdida de conocimiento'],
+      ['obstruccion', 'Atragantamiento'],
+      ['golpe_trauma', 'Golpe o trauma'],
+      ['mordedura_picadura', 'Mordedura o picadura'],
+      ['ahogamiento', 'Ahogamiento'],
+      ['convulsion', 'Convulsión'],
+      ['intoxicacion', 'Intoxicación'],
+      ['dificultad_respirar', 'Dificultad para respirar'],
+      ['otra_emergencia', 'Otra emergencia'],
+    ]);
+  });
 });

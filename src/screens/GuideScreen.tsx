@@ -1,9 +1,10 @@
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { Navigate, useParams } from 'react-router';
 import { premiumContent, uiText } from '../content';
 import { Illustration } from '../components/Illustration';
-import { Button, MenuButton } from '../components/MenuButton';
-import { Screen } from '../components/Screen';
+import { Button, MenuButton, PAIR_BUTTON_CLASS } from '../components/MenuButton';
+import { Screen, ScreenHeader, StepProgress } from '../components/Screen';
 import { useLanguage } from '../lib/i18n';
 import type { Guide } from '../types';
 
@@ -24,21 +25,31 @@ function GuideSteps({ guide }: { guide: Guide }) {
 
   return (
     <Screen>
-      <h1 className="text-center text-[26px] font-bold">{t(guide.title)}</h1>
-      <p className="text-center text-lg font-bold text-alert-blue">
-        {t(uiText.protocol.counter, { current: stepIndex + 1, total })}
-      </p>
-      <section aria-live="polite" className="flex flex-col gap-3">
+      <ScreenHeader title={t(guide.title)} />
+      <StepProgress
+        label={t(uiText.protocol.counter, { current: stepIndex + 1, total })}
+        current={stepIndex}
+        total={total}
+      />
+      <section aria-live="polite" className="flex flex-col gap-4">
         <Illustration name={step.illustration} label={t(step.label)} />
-        <p className="text-[19px] font-bold">{t(step.action)}</p>
-        <p className="text-base">{t(step.explanation)}</p>
+        <div className="flex flex-col gap-2 rounded-[20px] bg-surface p-5">
+          <p className="font-display text-[1.5rem] leading-tight font-bold text-ink">{t(step.action)}</p>
+          <p className="text-ink-muted">{t(step.explanation)}</p>
+        </div>
       </section>
-      <div className="flex gap-3">
-        <Button disabled={stepIndex === 0} onClick={() => setStepIndex(stepIndex - 1)}>
+      <div className="grid grid-cols-2 gap-3">
+        <Button disabled={stepIndex === 0} onClick={() => setStepIndex(stepIndex - 1)} className={PAIR_BUTTON_CLASS}>
+          <CaretLeft size={20} weight="bold" aria-hidden="true" />
           {t(library.previousButton)}
         </Button>
-        <Button variant="blue" disabled={stepIndex === total - 1} onClick={() => setStepIndex(stepIndex + 1)}>
+        <Button
+          disabled={stepIndex === total - 1}
+          onClick={() => setStepIndex(stepIndex + 1)}
+          className={PAIR_BUTTON_CLASS}
+        >
           {t(library.nextButton)}
+          <CaretRight size={20} weight="bold" aria-hidden="true" />
         </Button>
       </div>
       <MenuButton to="/premium/guias">{t(library.backToGuidesButton)}</MenuButton>

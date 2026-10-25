@@ -1,8 +1,9 @@
+import { AddressBook, Info, WarningCircle } from '@phosphor-icons/react';
 import { useEffect, useId, useState, type InputHTMLAttributes } from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router';
 import { uiText } from '../content';
 import { Button, MenuButton } from '../components/MenuButton';
-import { Screen } from '../components/Screen';
+import { Screen, ScreenHeader } from '../components/Screen';
 import {
   canPickContact,
   cleanPerson,
@@ -14,6 +15,7 @@ import {
   type PersonError,
 } from '../lib/contacts';
 import { saveDocument, useDocument } from '../lib/data';
+import { withoutEmoji } from '../lib/emoji';
 import { useLanguage } from '../lib/i18n';
 import { getFlag, setFlag } from '../lib/localPreferences';
 import { newTexts } from '../newTexts';
@@ -36,14 +38,14 @@ export default function PersonScreen() {
 function Field({ label, ...props }: { label: string } & InputHTMLAttributes<HTMLInputElement>) {
   const id = useId();
   return (
-    <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-base font-bold">
+    <div className="flex flex-col gap-1.5">
+      <label htmlFor={id} className="font-bold text-ink">
         {label}
       </label>
       <input
         id={id}
         maxLength={MAX_FIELD}
-        className="min-h-12 rounded-xl border-2 border-slate-400 px-3 text-lg focus:border-alert-blue"
+        className="min-h-14 rounded-[14px] border-2 border-ink/50 bg-page px-4 text-body text-ink transition-colors duration-150 focus:border-alert-blue aria-invalid:border-danger"
         {...props}
       />
     </div>
@@ -102,17 +104,17 @@ function PersonForm({ people, index }: { people: Contact[]; index?: number }) {
 
   return (
     <Screen>
-      <h1 className="text-center text-[28px] font-bold">{t(p.title)}</h1>
-      <p className="text-center text-lg">{t(p.description)}</p>
+      <ScreenHeader title={t(p.title)}>{t(p.description)}</ScreenHeader>
 
       {showNotice && (
-        <p role="note" className="rounded-xl bg-amber-50 p-3 text-base text-amber-900">
+        <p role="note" className="flex items-start gap-3 rounded-[16px] bg-warn/10 p-4 text-ink">
+          <Info size={22} weight="bold" aria-hidden="true" className="mt-0.5 shrink-0 text-warn" />
           {t(newTexts.person.thirdPartyNotice)}
         </p>
       )}
 
       <form
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-5"
         noValidate
         onSubmit={(event) => {
           event.preventDefault();
@@ -126,19 +128,26 @@ function PersonForm({ people, index }: { people: Contact[]; index?: number }) {
           aria-invalid={error === 'nameRequired'}
           onChange={(event) => update({ name: event.target.value })}
         />
-        <Field
-          label={t(p.phone)}
-          type="tel"
-          inputMode="tel"
-          autoComplete="tel"
-          value={person.phone}
-          aria-invalid={error === 'phoneRequired' || error === 'phoneInvalid'}
-          onChange={(event) => update({ phone: event.target.value })}
-        />
-        {canPickContact() && <Button onClick={() => void pick()}>{t(p.pickContact)}</Button>}
-        {pickedPhone && pickedPhone === person.phone && (
-          <p className="text-base text-slate-700">{t(p.selectedPhone, { phone: pickedPhone })}</p>
-        )}
+        <div className="flex flex-col gap-3">
+          <Field
+            label={t(p.phone)}
+            type="tel"
+            inputMode="tel"
+            autoComplete="tel"
+            value={person.phone}
+            aria-invalid={error === 'phoneRequired' || error === 'phoneInvalid'}
+            onChange={(event) => update({ phone: event.target.value })}
+          />
+          {canPickContact() && (
+            <Button onClick={() => void pick()}>
+              <AddressBook size={20} weight="bold" aria-hidden="true" />
+              {withoutEmoji(t(p.pickContact))}
+            </Button>
+          )}
+          {pickedPhone && pickedPhone === person.phone && (
+            <p className="text-caption text-ink-muted">{t(p.selectedPhone, { phone: pickedPhone })}</p>
+          )}
+        </div>
         <Field
           label={t(p.relationship)}
           autoComplete="off"
@@ -147,16 +156,17 @@ function PersonForm({ people, index }: { people: Contact[]; index?: number }) {
         />
 
         {error && (
-          <p role="alert" className="text-center text-base font-semibold text-alert-red">
+          <p role="alert" className="flex items-start gap-3 rounded-[16px] bg-danger/10 p-4 font-semibold text-danger">
+            <WarningCircle size={22} weight="bold" aria-hidden="true" className="mt-0.5 shrink-0" />
             {t(newTexts.person[error])}
           </p>
         )}
 
-        <Button type="submit" variant="blue">
-          {t(p.save)}
+        <Button type="submit" variant="blue" className="mt-1">
+          {withoutEmoji(t(p.save))}
         </Button>
       </form>
-      <MenuButton to="/nucleo">{t(newTexts.person.back)}</MenuButton>
+      <MenuButton to="/nucleo">{withoutEmoji(t(newTexts.person.back))}</MenuButton>
     </Screen>
   );
 }

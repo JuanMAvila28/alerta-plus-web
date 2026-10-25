@@ -61,7 +61,7 @@ export default function MainMenu() {
         href={PRIVACY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="self-center px-3 py-3 text-caption text-ink-muted underline underline-offset-4 hover:text-ink"
+        className="flex min-h-12 items-center self-center px-3 text-caption text-ink-muted underline underline-offset-4 hover:text-ink"
       >
         {t(menu.privacy)}
       </a>

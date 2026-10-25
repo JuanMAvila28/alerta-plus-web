@@ -49,7 +49,7 @@ test('screens with an account and Premium', async ({ page }) => {
   grantPremium('e2e-a11y');
   // Opening the app renews the session, which already brings the Premium license.
   await page.goto('/premium');
-  await expect(page.getByRole('button', { name: 'PREMIUM ACTIVO' })).toBeVisible();
+  await expect(page.getByRole('status').filter({ hasText: 'PREMIUM ACTIVO' })).toBeVisible();
 
   for (const path of [
     '/',
