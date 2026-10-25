@@ -1,5 +1,5 @@
 // Runs the Worker in Node against a local D1 (wrangler's getPlatformProxy) with a fake Google.
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT, type JWTPayload } from 'jose';
 import { getPlatformProxy } from 'wrangler';
@@ -7,11 +7,17 @@ import worker, { type Env } from '../src/index';
 
 export const CLIENT_ID = 'test-client.apps.googleusercontent.com';
 export const APP_URL = 'http://localhost:5173';
+export const WOMPI = {
+  publicKey: 'pub_test_alerta',
+  integritySecret: 'test_integrity_alerta',
+  eventsSecret: 'test_events_alerta',
+};
 const BASE = 'http://localhost:8787';
 
 export interface TestWorker {
   env: Env;
-  fetch(path: string, init?: RequestInit): Promise<Response>;
+  /** `env` replaces parts of the Worker's environment for this request only. */
+  fetch(path: string, init?: RequestInit, env?: Partial<Env>): Promise<Response>;
   /** ID token signed by the fake Google. */
   googleToken(claims?: JWTPayload, options?: { audience?: string; signWithOtherKey?: boolean }): Promise<string>;
   /** Posts the Google form; `csrfCookie: null` sends no cookie. */
@@ -24,7 +30,12 @@ export interface TestWorker {
 }
 
 async function applyMigrations(db: D1Database) {
-  const sql = readFileSync(resolve(import.meta.dirname, '../migrations/0001_initial.sql'), 'utf8')
+  const directory = resolve(import.meta.dirname, '../migrations');
+  const sql = readdirSync(directory)
+    .filter((file) => file.endsWith('.sql'))
+    .sort()
+    .map((file) => readFileSync(resolve(directory, file), 'utf8'))
+    .join(';\n')
     .replace(/--.*$/gm, '')
     .split(';')
     .map((statement) => statement.trim())
@@ -60,10 +71,15 @@ export async function startWorker(): Promise<TestWorker> {
     JWT_KID: 'test-1',
     JWT_PRIVATE_KEY: JSON.stringify(await exportJWK(ours.privateKey)),
     AUTH_LIMITER: undefined,
+    CHECKOUT_LIMITER: undefined,
+    WOMPI_PUBLIC_KEY: WOMPI.publicKey,
+    WOMPI_INTEGRITY_SECRET: WOMPI.integritySecret,
+    WOMPI_EVENTS_SECRET: WOMPI.eventsSecret,
     GOOGLE_KEYS: createLocalJWKSet({ keys: [googleJwk] }),
   };
 
-  const fetch = (path: string, init?: RequestInit) => worker.fetch(new Request(BASE + path, init), env);
+  const fetch = (path: string, init?: RequestInit, overrides: Partial<Env> = {}) =>
+    worker.fetch(new Request(BASE + path, init), { ...env, ...overrides });
 
   const googleToken: TestWorker['googleToken'] = (claims = {}, options = {}) =>
     new SignJWT({ email: 'ana@example.com', email_verified: true, name: 'Ana', ...claims })

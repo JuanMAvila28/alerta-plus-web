@@ -50,3 +50,25 @@ export const putDocumentBody = z
   .strict();
 
 export const consentBody = z.object({ policyVersion: z.string().min(1).max(MAX_FIELD) }).strict();
+
+export const checkoutBody = z.object({ product: z.enum(['standard', 'share']) }).strict();
+
+// Wompi events (docs.wompi.co, Eventos). Not strict: Wompi adds fields, and `data` is kept whole for the checksum.
+export const wompiEvent = z.object({
+  event: z.string(),
+  data: z.record(z.string(), z.unknown()),
+  environment: z.string(),
+  signature: z.object({ properties: z.array(z.string()).min(1), checksum: z.string() }),
+  timestamp: z.number().int(),
+});
+
+export const wompiTransaction = z.object({
+  id: z.string().min(1),
+  reference: z.string().min(1),
+  amount_in_cents: z.number().int(),
+  currency: z.string(),
+  status: z.string(),
+  payment_method_type: z.string().nullish(),
+});
+
+export type WompiTransaction = z.infer<typeof wompiTransaction>;
