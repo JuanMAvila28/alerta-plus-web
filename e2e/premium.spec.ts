@@ -39,7 +39,10 @@ test('a paid purchase activates Premium with RESTAURAR, and it keeps working off
   await page.getByRole('button', { name: 'SIGUIENTE' }).click();
   await expect(page.getByText('AGUA CORRIENTE FRESCA', { exact: true })).toBeVisible();
   await expect(page.locator('figure img')).toHaveAttribute('src', '/illustrations/water.svg');
-  expect(await page.locator('figure img').evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0);
+  // Polled: the new step's image is still loading right after SIGUIENTE.
+  await expect
+    .poll(() => page.locator('figure img').evaluate((img: HTMLImageElement) => img.naturalWidth))
+    .toBeGreaterThan(0);
 
   // Practice: answer everything right except the first question
   await page.goto('/premium/practica');
