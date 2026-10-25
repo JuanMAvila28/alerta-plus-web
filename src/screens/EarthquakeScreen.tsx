@@ -1,7 +1,8 @@
 import { earthquakeContent, uiText } from '../content';
 import { MenuButton } from '../components/MenuButton';
+import { EarthquakePictogram } from '../components/Pictogram';
 import { ReaderControls } from '../components/ReaderControls';
-import { Screen } from '../components/Screen';
+import { HeaderIcon, Screen, ScreenHeader, StepProgress } from '../components/Screen';
 import { defaultContent, useDocument } from '../lib/data';
 import { earthquakeSteps, visibleInstructions } from '../lib/earthquake';
 import { useLanguage } from '../lib/i18n';
@@ -22,7 +23,7 @@ export default function EarthquakeScreen() {
 function EarthquakeReader({ home }: { home: Home }) {
   const { language, t } = useLanguage();
   const total = earthquakeSteps.length;
-  const { index, mode, start, next, isLast } = useStepReader({
+  const reader = useStepReader({
     total,
     // Title + each visible instruction (plan section 6.4).
     textFor: (i) => {
@@ -33,23 +34,32 @@ function EarthquakeReader({ home }: { home: Home }) {
     },
     language,
   });
+  const { index, isLast } = reader;
   useWakeLock(true);
   const step = earthquakeSteps[index]!;
 
   return (
     <Screen>
-      <h1 className="text-center text-[28px] font-bold text-alert-red">{t(earthquakeContent.heading)}</h1>
-      <p className="text-center text-xl font-bold">{t(uiText.protocol.counter, { current: index + 1, total })}</p>
-      <section aria-live="polite" className="flex flex-col gap-3">
-        <h2 className="text-center text-2xl font-bold text-alert-blue">{t(step.title)}</h2>
-        <ol className="flex list-decimal flex-col gap-2 pl-7 text-lg leading-relaxed marker:font-bold">
+      <ScreenHeader
+        title={t(earthquakeContent.heading)}
+        icon={
+          <HeaderIcon className="bg-alert-red text-white">
+            <EarthquakePictogram className="size-9" />
+          </HeaderIcon>
+        }
+      />
+      <StepProgress label={t(uiText.protocol.counter, { current: index + 1, total })} current={index} total={total} />
+      {/* Fixed minimum height: the buttons below stay put while the steps change. */}
+      <section aria-live="polite" className="flex min-h-60 flex-col gap-3 rounded-[20px] bg-surface p-5">
+        <h2 className="font-display text-[1.75rem] leading-tight font-bold text-ink">{t(step.title)}</h2>
+        <ol className="flex list-decimal flex-col gap-2 pl-6 text-[1.125rem] leading-relaxed text-ink marker:font-bold marker:text-ink-muted">
           {visibleInstructions(step, home).map((instruction) => (
             <li key={instruction.text.es}>{t(instruction.text)}</li>
           ))}
         </ol>
       </section>
 
-      <ReaderControls mode={mode} isLast={isLast} onStart={start} onNext={next} />
+      <ReaderControls reader={reader} />
       {isLast && (
         <MenuButton to="/" variant="blue">
           {t(uiText.protocol.back)}

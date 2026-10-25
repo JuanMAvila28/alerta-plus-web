@@ -1,8 +1,11 @@
+import { ArrowUUpLeft } from '@phosphor-icons/react';
 import { Navigate, useParams } from 'react-router';
 import { protocolsContent, uiText } from '../content';
 import { MenuButton } from '../components/MenuButton';
+import { protocolIcon } from '../components/protocolIcons';
 import { ReaderControls } from '../components/ReaderControls';
-import { Screen } from '../components/Screen';
+import { HeaderIcon, Screen, ScreenHeader, StepProgress } from '../components/Screen';
+import { withoutEmoji } from '../lib/emoji';
 import { useLanguage } from '../lib/i18n';
 import { useStepReader } from '../lib/useStepReader';
 import { useWakeLock } from '../lib/wakeLock';
@@ -20,27 +23,39 @@ export default function ProtocolScreen() {
 function ProtocolReader({ protocol }: { protocol: Protocol }) {
   const { language, t } = useLanguage();
   const total = protocol.steps.length;
-  const { index, mode, start, next, isLast } = useStepReader({
+  const reader = useStepReader({
     total,
     textFor: (i) => t(protocol.steps[i]!),
     language,
   });
+  const { index, isLast } = reader;
   useWakeLock(true);
+  const ProtocolIcon = protocolIcon(protocol.id);
 
   return (
     <Screen>
-      <h1 className="text-center text-[26px] font-bold">{t(protocol.title)}</h1>
-      <p className="text-center text-[22px] font-bold text-alert-blue">
-        {t(uiText.protocol.counter, { current: index + 1, total })}
-      </p>
-      <p aria-live="polite" className="flex min-h-40 items-center justify-center text-center text-xl leading-relaxed">
+      <ScreenHeader
+        title={withoutEmoji(t(protocol.title))}
+        icon={
+          <HeaderIcon className="bg-alert-red text-white">
+            <ProtocolIcon size={28} weight="bold" aria-hidden="true" />
+          </HeaderIcon>
+        }
+      />
+      <StepProgress label={t(uiText.protocol.counter, { current: index + 1, total })} current={index} total={total} />
+      {/* Fixed minimum height: the buttons below stay put while the steps change. */}
+      <p
+        aria-live="polite"
+        className="flex min-h-44 items-center rounded-[20px] bg-surface p-5 text-[1.375rem] leading-normal font-semibold text-ink"
+      >
         {t(protocol.steps[index]!)}
       </p>
 
-      <ReaderControls mode={mode} isLast={isLast} onStart={start} onNext={next} />
+      <ReaderControls reader={reader} />
       {isLast && (
         <MenuButton to="/emergencia" variant="blue">
-          {t(uiText.protocol.backToEmergencies)}
+          <ArrowUUpLeft size={20} weight="bold" aria-hidden="true" />
+          {withoutEmoji(t(uiText.protocol.backToEmergencies))}
         </MenuButton>
       )}
       <MenuButton to="/emergencia">{t(uiText.protocol.exit)}</MenuButton>

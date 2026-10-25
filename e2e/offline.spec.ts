@@ -22,11 +22,11 @@ test('without connection: earthquake and protocols open and read (no account)', 
   await context.setOffline(true);
 
   await page.goto('/sismo');
-  await page.getByRole('button', { name: '▶ COMENZAR' }).click();
+  await page.getByText('Toca la pantalla para escuchar las instrucciones en voz alta.').click();
   await expect(page.getByText('Paso 8 de 8')).toBeVisible({ timeout: 15_000 });
 
   await page.goto('/emergencia/ahogamiento');
-  await page.getByRole('button', { name: '▶ COMENZAR' }).click();
+  await page.getByText('Toca la pantalla para escuchar las instrucciones en voz alta.').click();
   await expect(page.getByText('Paso 6 de 6')).toBeVisible({ timeout: 15_000 });
 
   // Illustrations are cached too.
@@ -55,5 +55,5 @@ test('signed in and offline: editing works, stays pending and syncs when back on
   await expect
     .poll(async () => ((await readDocument(page, 'firstAidKit')) as { pending: boolean }).pending, { timeout: 10_000 })
     .toBe(false);
-  await expect(page.getByText('✓ Sincronizado')).toBeVisible();
+  await expect(page.getByText('Sincronizado')).toBeVisible();
 });

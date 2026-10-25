@@ -1,42 +1,10 @@
-import {
-  Ambulance,
-  Bandaids,
-  Bone,
-  Bug,
-  EyeClosed,
-  Fire,
-  ForkKnife,
-  HandFist,
-  Lightning,
-  Pulse,
-  Skull,
-  Waves,
-  Wind,
-  type Icon,
-} from '@phosphor-icons/react';
 import { Link } from 'react-router';
 import { protocolsContent, uiText } from '../content';
 import { MenuButton } from '../components/MenuButton';
+import { protocolIcon } from '../components/protocolIcons';
 import { Screen, ScreenHeader } from '../components/Screen';
 import { withoutEmoji } from '../lib/emoji';
 import { useLanguage } from '../lib/i18n';
-
-// One icon per protocol id: the approved texts keep their emoji, the screen draws these instead.
-const ICONS: Record<string, Icon> = {
-  herida: Bandaids,
-  fractura: Bone,
-  quemadura: Fire,
-  electrocucion: Lightning,
-  desmayo: EyeClosed,
-  obstruccion: ForkKnife,
-  golpe_trauma: HandFist,
-  mordedura_picadura: Bug,
-  ahogamiento: Waves,
-  convulsion: Pulse,
-  intoxicacion: Skull,
-  dificultad_respirar: Wind,
-  otra_emergencia: Ambulance,
-};
 
 /** The catch-all goes last and full width, so the 12 specific cases pair up without a gap. */
 const GENERAL_ID = 'otra_emergencia';
@@ -49,7 +17,7 @@ export default function EmergencyMenu() {
       <ScreenHeader title={t(uiText.emergency.title)}>{t(uiText.emergency.question)}</ScreenHeader>
       <nav className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2">
         {protocolsContent.protocols.map((protocol) => {
-          const ProtocolIcon = ICONS[protocol.id] ?? Ambulance;
+          const ProtocolIcon = protocolIcon(protocol.id);
           const general = protocol.id === GENERAL_ID;
           return (
             <Link

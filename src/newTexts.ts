@@ -133,12 +133,17 @@ export const newTexts = {
   },
   // Phase 4: step reader (plan section 6.6 and fix 9.6).
   reader: {
-    start: { es: '▶ COMENZAR', en: '▶ START' },
     startHint: {
-      es: 'Toca COMENZAR para escuchar las instrucciones en voz alta.',
-      en: 'Tap START to hear the instructions aloud.',
+      es: 'Toca la pantalla para escuchar las instrucciones en voz alta.',
+      en: 'Tap the screen to hear the instructions aloud.',
     },
-    next: { es: 'SIGUIENTE PASO ▶', en: 'NEXT STEP ▶' },
+    previous: { es: 'ANTERIOR', en: 'PREVIOUS' },
+    next: { es: 'SIGUIENTE', en: 'NEXT' },
+    autoAdvance: { es: 'Avance automático', en: 'Auto-advance' },
+    autoOffHint: {
+      es: 'Te quedas en este paso hasta que toques ANTERIOR o SIGUIENTE.',
+      en: 'You stay on this step until you tap PREVIOUS or NEXT.',
+    },
   },
   // Phase 6: Premium without payments (D2 and D3 pending).
   premium: {

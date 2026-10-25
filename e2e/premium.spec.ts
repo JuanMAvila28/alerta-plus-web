@@ -28,10 +28,10 @@ test('a paid purchase activates Premium with RESTAURAR, and it keeps working off
   grantPremium('e2e-premium');
   await page.getByRole('button', { name: 'RESTAURAR COMPRA' }).click();
   await expect(page.getByText('Premium está activo en tu cuenta.')).toBeVisible();
-  await expect(page.getByRole('button', { name: 'PREMIUM ACTIVO' })).toBeDisabled();
+  await expect(page.getByRole('status').filter({ hasText: 'PREMIUM ACTIVO' })).toBeVisible();
 
   // Library → guide
-  await page.getByRole('link', { name: '⭐ TU BIBLIOTECA PREMIUM' }).click();
+  await page.getByRole('link', { name: 'TU BIBLIOTECA PREMIUM' }).click();
   await expect(page.locator('nav a')).toHaveCount(13);
   await page.getByRole('link', { name: 'Quemaduras' }).click();
   await expect(page.getByText('Paso 1 de 3')).toBeVisible();

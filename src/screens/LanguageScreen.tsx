@@ -42,7 +42,7 @@ export default function LanguageScreen() {
               <span
                 aria-hidden="true"
                 className={`flex size-8 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-150 ${
-                  selected ? 'border-alert-blue bg-alert-blue text-white' : 'border-ink/30'
+                  selected ? 'border-alert-blue bg-alert-blue text-white' : 'border-ink/50'
                 }`}
               >
                 {selected && <Check size={18} weight="bold" />}

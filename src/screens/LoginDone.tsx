@@ -42,7 +42,7 @@ export default function LoginDone() {
           size={40}
           weight="bold"
           aria-hidden="true"
-          className="text-alert-blue motion-safe:animate-[spin_0.9s_linear_infinite]"
+          className="text-link motion-safe:animate-[spin_0.9s_linear_infinite]"
         />
         <p className="font-display text-[1.75rem] font-bold">{t(newTexts.login.entering)}</p>
       </div>

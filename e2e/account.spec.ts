@@ -58,35 +58,35 @@ test('home, lists and family group persist after reloading and sync to a second 
 
   // Kit: tap two items
   await phone.goto('/kit');
-  await phone.getByRole('checkbox', { name: '💧 Agua' }).click();
-  await phone.getByRole('checkbox', { name: '📻 Radio' }).click();
+  await phone.getByRole('checkbox', { name: 'Agua' }).click();
+  await phone.getByRole('checkbox', { name: 'Radio' }).click();
   await expect(phone.getByText('Listos: 2 de 9')).toBeVisible();
 
   // Family group: name required, invalid phone, then save
   await phone.goto('/nucleo/persona');
   await expect(phone.getByText('Asegúrate de que las personas que agregas estén de acuerdo en recibir tus avisos.')).toBeVisible();
-  await phone.getByRole('button', { name: '💾 GUARDAR PERSONA' }).click();
+  await phone.getByRole('button', { name: 'GUARDAR PERSONA' }).click();
   await expect(phone.getByRole('alert')).toHaveText('Escribe el nombre de la persona.');
   await phone.getByLabel('Nombre de la persona').fill('Ana Torres');
   await phone.getByLabel('Número telefónico').fill('300 abc');
-  await phone.getByRole('button', { name: '💾 GUARDAR PERSONA' }).click();
+  await phone.getByRole('button', { name: 'GUARDAR PERSONA' }).click();
   await expect(phone.getByRole('alert')).toHaveText('El número solo puede tener dígitos, espacios, guiones y +.');
   await phone.getByLabel('Número telefónico').fill('+57 300 123 4567');
   await phone.getByLabel('Relación con esta persona').fill('Mamá');
-  await phone.getByRole('button', { name: '💾 GUARDAR PERSONA' }).click();
+  await phone.getByRole('button', { name: 'GUARDAR PERSONA' }).click();
   await expect(phone).toHaveURL(/\/nucleo$/);
-  await expect(phone.getByText('👤 Ana Torres')).toBeVisible();
+  await expect(phone.getByText('Ana Torres', { exact: true })).toBeVisible();
 
   // Edit preloads the three fields (fix 9.2)
-  await phone.getByRole('link', { name: '✏️ EDITAR' }).click();
+  await phone.getByRole('link', { name: 'EDITAR' }).click();
   await expect(phone.getByLabel('Nombre de la persona')).toHaveValue('Ana Torres');
   await expect(phone.getByLabel('Número telefónico')).toHaveValue('+57 300 123 4567');
   await expect(phone.getByLabel('Relación con esta persona')).toHaveValue('Mamá');
-  await phone.getByRole('link', { name: '↩️ VOLVER' }).click();
+  await phone.getByRole('link', { name: 'VOLVER', exact: true }).click();
 
   // Everything survives a reload
   await phone.reload();
-  await expect(phone.getByText('👤 Ana Torres')).toBeVisible();
+  await expect(phone.getByText('Ana Torres', { exact: true })).toBeVisible();
   await phone.goto('/kit');
   await expect(phone.getByText('Listos: 2 de 9')).toBeVisible();
   for (const type of ['home', 'kit', 'contacts']) await waitForSync(phone, type);
@@ -97,23 +97,24 @@ test('home, lists and family group persist after reloading and sync to a second 
   await signInWithGoogle(laptop, user);
   await expect(laptop).toHaveURL(/\/$/); // already authorized: no /bienvenida
   await laptop.goto('/nucleo');
-  await expect(laptop.getByText('👤 Ana Torres')).toBeVisible();
+  await expect(laptop.getByText('Ana Torres', { exact: true })).toBeVisible();
   await laptop.goto('/kit');
-  await expect(laptop.getByRole('checkbox', { name: '💧 Agua' })).toHaveAttribute('aria-checked', 'true');
+  await expect(laptop.getByRole('checkbox', { name: 'Agua' })).toHaveAttribute('aria-checked', 'true');
   await laptop.goto('/vivienda');
   await expect(laptop.getByRole('radio', { name: 'Apartamento' })).toBeChecked();
 
   // Delete on the laptop (fix 9.1): gone on the phone too
   await laptop.goto('/nucleo');
-  await laptop.getByRole('button', { name: '🗑️ ELIMINAR' }).click();
-  await expect(laptop.getByText('👤 Ana Torres')).toBeHidden();
+  await laptop.getByRole('button', { name: 'ELIMINAR', exact: true }).click();
+  await expect(laptop.getByText('Ana Torres', { exact: true })).toBeHidden();
   await waitForSync(laptop, 'contacts');
   await phone.goto('/nucleo');
-  await expect(phone.getByText('👤 Ana Torres')).toBeHidden();
+  await expect(phone.getByText('Ana Torres', { exact: true })).toBeHidden();
 
   // The earthquake now uses the saved home (apartment, third floor or higher)
   await phone.goto('/');
   await phone.getByRole('link', { name: 'ESTÁ TEMBLANDO' }).click();
+  await phone.getByText('Toca la pantalla para escuchar las instrucciones en voz alta.').click();
   await expect(phone.getByText('Paso 8 de 8')).toBeVisible({ timeout: 15_000 });
   const spoken = await phone.evaluate(() => (window as unknown as { __spoken: string[] }).__spoken);
   expect(spoken).toContain('Estás en un piso alto.');
